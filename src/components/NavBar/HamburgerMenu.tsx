@@ -21,6 +21,7 @@ const Navigation: React.FC = () => {
 				<li>Contact</li>
 				<li>About</li>
 			</ul>
+		
 		</div>
 	);
 };
