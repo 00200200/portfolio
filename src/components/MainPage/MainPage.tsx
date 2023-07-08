@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './MainPage.css';
-
 const MainPage: React.FC = () => {
+	const contactRef = useRef<HTMLDivElement>(null);
+
 	const handleContactClick = () => {
-		const contact = document.getElementById('contact') as HTMLDivElement;
-		contact?.scrollIntoView({ behavior: 'smooth' });
+		contactRef.current?.scrollIntoView({ behavior: 'smooth' });
 	};
 	const handleArrowClick = (): void => {};
 	return (
@@ -21,10 +21,10 @@ const MainPage: React.FC = () => {
 					<h1>About me</h1>
 					<div className='rightTextContent'>
 						<p>
-							Jestem studentem informatyki na <a>Politechnice Wrocławskiej</a>, gdzie zdobywam wiedzę z zakresu
-							bleblebleble <a>tetetee</a>, dasddasda, Lorem, ipsum dolor. Lorem, ipsum dolor sit amet consectetur
-							adipisicing elit. Quos, mollitia! Lorem ipsum dolor sit. <a>Lorem, ipsum.</a> Lorem ipsum dolor sit amet
-							consectetur adipisicing elit.s
+							Jestem studentem informatyki na <a href='#'>Politechnice Wrocławskiej</a>, gdzie zdobywam wiedzę z zakresu
+							bleblebleble <a href='#'>tetetee</a>, dasddasda, Lorem, ipsum dolor. Lorem, ipsum dolor sit amet
+							consectetur adipisicing elit. Quos, mollitia! Lorem ipsum dolor sit. <a href='#'>Lorem, ipsum.</a> Lorem
+							ipsum dolor sit amet consectetur adipisicing elit.s
 						</p>
 					</div>
 				</div>
