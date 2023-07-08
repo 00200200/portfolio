@@ -1,5 +1,9 @@
 .main-page {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 	min-height: 90vh;
+	max-width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -9,35 +13,57 @@
 }
 
 .content {
-	width: 100vw;
+	width: 100%;
 	text-align: center;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
 .leftContent {
-	width: 60vw;
+	margin-left: 5vw;
+	width: 40vw;
 	color: var(--main-text-color);
+	text-align: left;
+}
+.rightContent {
+	width: 40vw;
+	text-align: left;
+}
+.rightTextContent {
+	width: 30vw;
 }
 
 h1 {
-	color: var(--tertiary-color);
+	color: var(--main-text-color);
 	font-size: 32px;
 	margin-bottom: 10px;
 }
 
 h2 {
+	color: var(--quaternary-color);
 	font-size: 24px;
 	margin-bottom: 20px;
+}
+p {
+	color: var(--quaternary-color);
+}
+a {
+	color: var(--main-text-color);
+	text-decoration: underline;
 }
 
 .contact-button {
 	padding: 10px 20px;
 	font-size: 18px;
 	border-radius: 5px;
-	background-color: var(--tertiary-color);
-	color: black;
-	border: none;
+	background-color: var(--primary-color);
+	border: 1px solid var(--main-text-color);
+
+	color: white;
 	cursor: pointer;
+}
+.contact-button:hover {
+	background-color: var(--quaternary-color);
+	transition: 1s ease-in-out;
 }
 
 .scroll-down-arrow {
