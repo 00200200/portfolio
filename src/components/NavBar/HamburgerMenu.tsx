@@ -19,7 +19,7 @@ const Navigation: React.FC = () => {
 		} else if (id === 'contact') {
 			window.scrollTo({ top: 10000, behavior: 'smooth' });
 		} else {
-			const section = document.getElementById(id);
+			const section = document.getElementById(id) as HTMLDivElement;
 			if (section) {
 				const navigationHeight = navigationRef.current?.offsetHeight || 0;
 				const sectionTopOffset = section.offsetTop - navigationHeight;

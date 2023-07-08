@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './MainPage.css';
-
 const MainPage: React.FC = () => {
+
 	const contactRef = useRef<HTMLDivElement>(null); // Referencja do elementu kontaktu
 
 	const handleContactClick = (): void => {
@@ -14,6 +14,11 @@ const MainPage: React.FC = () => {
 			const contactTopOffset = contact.offsetTop;
 			window.scrollTo({ top: contactTopOffset, behavior: 'smooth' });
 		}
+
+	const contactRef = useRef<HTMLDivElement>(null);
+
+	const handleContactClick = () => {
+		contactRef.current?.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	return (
@@ -30,10 +35,10 @@ const MainPage: React.FC = () => {
 					<h1>About me</h1>
 					<div className='rightTextContent'>
 						<p>
-							Jestem studentem informatyki na <a>Politechnice Wrocławskiej</a>, gdzie zdobywam wiedzę z zakresu
-							bleblebleble <a>tetetee</a>, dasddasda, Lorem, ipsum dolor. Lorem, ipsum dolor sit amet consectetur
-							adipisicing elit. Quos, mollitia! Lorem ipsum dolor sit. <a>Lorem, ipsum.</a> Lorem ipsum dolor sit amet
-							consectetur adipisicing elit.s
+							Jestem studentem informatyki na <a href='#'>Politechnice Wrocławskiej</a>, gdzie zdobywam wiedzę z zakresu
+							bleblebleble <a href='#'>tetetee</a>, dasddasda, Lorem, ipsum dolor. Lorem, ipsum dolor sit amet
+							consectetur adipisicing elit. Quos, mollitia! Lorem ipsum dolor sit. <a href='#'>Lorem, ipsum.</a> Lorem
+							ipsum dolor sit amet consectetur adipisicing elit.s
 						</p>
 					</div>
 				</div>
