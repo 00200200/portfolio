@@ -2,8 +2,11 @@ import React from 'react';
 import './MainPage.css';
 
 const MainPage: React.FC = () => {
-	const handleContactClick = () => {};
-	const handleArrowClick = () => {};
+	const handleContactClick = () => {
+		const contact = document.getElementById('contact') as HTMLDivElement;
+		contact?.scrollIntoView({ behavior: 'smooth' });
+	};
+	const handleArrowClick = (): void => {};
 	return (
 		<div id='home' className='main-page'>
 			<div className='content'>
@@ -19,10 +22,9 @@ const MainPage: React.FC = () => {
 					<div className='rightTextContent'>
 						<p>
 							Jestem studentem informatyki na <a>Politechnice Wrocławskiej</a>, gdzie zdobywam wiedzę z zakresu
-							programowania i informatyki. Przed maturą uczestniczyłem w bootcampie JavaScript. W czasie przygotowań do
-							matury poznałem podstawy języka Python, a na pierwszym roku studiów poznałem podstawy języków
-							programowania C/C++ oraz Java. Jestem bardzo zmotywowany, aby rozwijać swoje umiejętności programistyczne
-							i poznać nowe technologie.
+							bleblebleble <a>tetetee</a>, dasddasda, Lorem, ipsum dolor. Lorem, ipsum dolor sit amet consectetur
+							adipisicing elit. Quos, mollitia! Lorem ipsum dolor sit. <a>Lorem, ipsum.</a> Lorem ipsum dolor sit amet
+							consectetur adipisicing elit.s
 						</p>
 					</div>
 				</div>

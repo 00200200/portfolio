@@ -4,15 +4,15 @@ import './HamburgerMenu.css';
 const Navigation: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	const toggleMenu = () => {
+	const toggleMenu = () : void=> {
 		setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
 	};
 
-	const handleMenuItemClick = () => {
+	const handleMenuItemClick = () : void => {
 		setIsMenuOpen(false);
 	};
 
-	const handleScrollToSection = (id: string) => {
+	const handleScrollToSection = (id: string) : void => {
 		if (id === 'home') {
 			window.scrollTo({ top: 0, behavior: 'smooth' });
 		} else {
