@@ -1,24 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import HamburgerMenu from './components/NavBar/HamburgerMenu';
-import MainPage from './components/MainPage/MainPage';
+import LandingPage from './components/LandingPage/LandingPage';
 import Projects from './components/Projects/Projects';
 import Contact from './components/contact/Contact';
-import { createRoot } from 'react-dom/client';
-
+import { Route, Routes } from 'react-router-dom';
+import About from './components/about/Abouts';
+import MainPage from './components/MainPage/MainPage';
 const App: React.FC = () => {
 	return (
 		<div id='root' style={{ background: '323232' }}>
 			<HamburgerMenu />
-			<MainPage></MainPage>
+			{/* <LandingPage></LandingPage>
 			<Projects></Projects>
-			<Contact></Contact>
+			<Contact></Contact> */}
+			<Routes>
+				<Route path='/' element={<MainPage />} />
+				{/* <Route path='/projects' element={<Projects />} /> */}
+				{/* <Route path='/contact' element={<Contact />} /> */}
+				<Route path='/about' element={<About />} />
+			</Routes>
 		</div>
 	);
 };
 
-const container = document.getElementById('root');
-if (container) {
-	const rootElement = createRoot(container);
-	rootElement.render(<App />);
-}
+ReactDOM.render(
+	<BrowserRouter>
+		<App />
+	</BrowserRouter>,
+	document.getElementById('root')
+);

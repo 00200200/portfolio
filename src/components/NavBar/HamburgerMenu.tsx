@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import './HamburgerMenu.css';
 
 const Navigation: React.FC = () => {
@@ -37,17 +39,26 @@ const Navigation: React.FC = () => {
 				<span className='line' />
 			</button>
 			<ul className={`menu-items ${isMenuOpen ? 'open' : ''}`}>
-				<li onClick={() => handleScrollToSection('home')} onMouseDown={handleMenuItemClick}>
-					Home
+				<li onMouseDown={handleMenuItemClick}>
+					<Link onClick={() => handleScrollToSection('home')} to='/'>
+						Home
+					</Link>
 				</li>
-				<li onClick={() => handleScrollToSection('projects')} onMouseDown={handleMenuItemClick}>
-					Projects
+				<li onMouseDown={handleMenuItemClick}>
+					<Link onClick={() => handleScrollToSection('projects')} to='/#projects'>
+						Projects
+					</Link>
 				</li>
-				<li onClick={() => handleScrollToSection('contact')} onMouseDown={handleMenuItemClick}>
-					Contact
+
+				<li onMouseDown={handleMenuItemClick}>
+					<Link onClick={() => handleScrollToSection('contact')} to='/#contact'>
+						Contact
+					</Link>
 				</li>
-				<li onClick={() => handleScrollToSection('contact')} onMouseDown={handleMenuItemClick}>
-					About
+				<li onMouseDown={handleMenuItemClick}>
+					<Link to='/About' onClick={() => handleScrollToSection('contact')}>
+						About
+					</Link>
 				</li>
 			</ul>
 		</div>
