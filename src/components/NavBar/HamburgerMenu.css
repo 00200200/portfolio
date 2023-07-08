@@ -38,6 +38,9 @@
 }
 
 .menu-items.open {
+	background-color: var(--primary-color);
+	width: 100vw;
+	height: 100vh;
 	opacity: 1;
 	transform: translateY(0);
 }
@@ -59,11 +62,10 @@
 }
 
 @media (max-width: 767px) {
-	.navigation {
+	.open {
 		width: 100vw;
 		height: 100vh;
 	}
-
 	.menu-items {
 		/* display: none; */
 		width: 100vw;
@@ -83,7 +85,7 @@
 		overflow: hidden;
 		width: 100%;
 		height: 2px;
-		background-color: #000;
+		background-color: var(--main-text-color);
 		transition: background-color 0.3s ease;
 	}
 

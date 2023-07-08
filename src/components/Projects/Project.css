@@ -33,3 +33,16 @@
 .project-links {
 	margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+	.project {
+		width: 80vw;
+		height: auto;
+		padding: 10px;
+		margin: 10px auto;
+	}
+
+	.project-title {
+		padding-top: 5vh;
+	}
+}
