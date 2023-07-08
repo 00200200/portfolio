@@ -41,7 +41,6 @@
 	background-color: var(--quaternary-color);
 }
 
-/* Responsywność na telefonach */
 @media (max-width: 767px) {
 	.contact-buttons {
 		flex-direction: column;
