@@ -54,7 +54,7 @@
 }
 
 .menu-items li:hover {
-	color: var(--tertiary-color);
+	color: var(--quaternary-color);
 	transition: 0.7s ease-in-out;
 }
 

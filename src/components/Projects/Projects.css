@@ -1,0 +1,21 @@
+@import url('../styles.css');
+.projects {
+	width: 100%;
+	padding: 20px;
+	background-color: var(--primary-color);
+}
+
+.projects-title {
+	font-size: 32px;
+	margin-bottom: 20px;
+	text-align: left;
+	color: var(--main-text-color);
+	text-align: center;
+}
+
+.projects-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
