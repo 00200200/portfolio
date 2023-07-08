@@ -1,12 +1,27 @@
 import React from 'react';
 import './Project.css';
 
-const Project: React.FC = () => {
+interface ProjectProps {
+	title: string;
+	name: string;
+	description: string;
+	image: string | undefined;
+}
+
+const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
+	const { title, name, description, image } = props;
+
+	const projectStyle = {
+		backgroundImage: `url(${image})`,
+	};
+
 	return (
-		<div className='project'>
-			<h1 className='project-title'>TypeScript & React</h1>
-			<p className='project-name'>Project Name</p>
-			<p className='project-description'>Project Description</p>
+		<div className='project' style={projectStyle}>
+			<div className='project-content'>
+				<h1 className='project-title'>{title}</h1>
+				<p className='project-name'>{name}</p>
+				<p className='project-description'>{description}</p>
+			</div>
 			<div className='project-links'></div>
 		</div>
 	);
