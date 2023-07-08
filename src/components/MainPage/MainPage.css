@@ -50,6 +50,9 @@ a {
 	color: var(--main-text-color);
 	text-decoration: underline;
 }
+.menu-items li a {
+	text-decoration: none;
+}
 
 .contact-button {
 	padding: 10px 20px;
@@ -64,15 +67,6 @@ a {
 .contact-button:hover {
 	background-color: var(--quaternary-color);
 	transition: 1s ease-in-out;
-}
-
-.scroll-down-arrow {
-	color: var(--main-text-color);
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	cursor: pointer;
 }
 
 .arrow {
@@ -99,4 +93,22 @@ a {
 	.arrow {
 		font-size: 24px;
 	}
+}
+.scroll-down-arrow {
+	color: var(--main-text-color);
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+}
+
+.scroll-down-arrow:hover {
+	transform: translateX(-50%) scale(1.1);
+}
+
+.main-page:hover .scroll-down-arrow {
+	transform: translateX(-50%) scale(1.1);
+	transition: transform 0.3s ease-in-out;
 }

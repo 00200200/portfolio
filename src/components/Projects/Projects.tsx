@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
 		image: 'Project Image',
 	};
 	return (
-		<div id='projects' className='projects'>
+		<section id='projects' className='projects'>
 			<h1 className='projects-title'>Projects</h1>
 			<div className='projects-list'>
 				<Project {...projectData} />
@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
 				<Project {...projectData} />
 				<Project {...projectData} />
 			</div>
-		</div>
+		</section>
 	);
 };
 

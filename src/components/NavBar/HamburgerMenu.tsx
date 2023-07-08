@@ -1,31 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './HamburgerMenu.css';
 
 const Navigation: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const navigationRef = useRef<HTMLDivElement>(null); // Referencja do elementu nawigacji
 
-	const toggleMenu = () : void=> {
+	const toggleMenu = (): void => {
 		setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
 	};
 
-	const handleMenuItemClick = () : void => {
+	const handleMenuItemClick = (): void => {
 		setIsMenuOpen(false);
 	};
 
-	const handleScrollToSection = (id: string) : void => {
+	const handleScrollToSection = (id: string): void => {
 		if (id === 'home') {
 			window.scrollTo({ top: 0, behavior: 'smooth' });
+		} else if (id === 'contact') {
+			window.scrollTo({ top: 10000, behavior: 'smooth' });
 		} else {
 			const section = document.getElementById(id) as HTMLDivElement;
 			if (section) {
-				section.scrollIntoView({ behavior: 'smooth' });
+				const navigationHeight = navigationRef.current?.offsetHeight || 0;
+				const sectionTopOffset = section.offsetTop - navigationHeight;
+				window.scrollTo({ top: sectionTopOffset, behavior: 'smooth' });
 			}
 		}
 		setIsMenuOpen(false);
 	};
 
 	return (
-		<div className={`navigation ${isMenuOpen ? 'open' : ''}`}>
+		<div className={`navigation ${isMenuOpen ? 'open' : ''}`} ref={navigationRef}>
 			<button className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
 				<span className='line' />
 				<span className='line' />
@@ -41,7 +46,7 @@ const Navigation: React.FC = () => {
 				<li onClick={() => handleScrollToSection('contact')} onMouseDown={handleMenuItemClick}>
 					Contact
 				</li>
-				<li onClick={() => handleScrollToSection('about')} onMouseDown={handleMenuItemClick}>
+				<li onClick={() => handleScrollToSection('contact')} onMouseDown={handleMenuItemClick}>
 					About
 				</li>
 			</ul>

@@ -34,12 +34,39 @@
 	background-color: var(--secondary-color);
 	border: none;
 	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
 	transition: background-color 0.3s ease;
+	padding-left: 40px;
+}
+
+.contact-button .button-icon {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
 }
 
 .contact-button:hover {
 	background-color: var(--quaternary-color);
 }
+
+.contact-button:hover .button-icon {
+	animation: icon-bounce 0.3s ease-in-out;
+}
+
+@keyframes icon-bounce {
+	0% {
+		transform: translateY(-50%);
+	}
+	50% {
+		transform: translateY(-30%);
+	}
+	100% {
+		transform: translateY(-50%);
+	}
+}
+
 
 @media (max-width: 767px) {
 	.contact-buttons {
