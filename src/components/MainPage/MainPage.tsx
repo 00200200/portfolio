@@ -1,23 +1,10 @@
 import React, { useRef } from 'react';
 import './MainPage.css';
-const MainPage: React.FC = () => {
 
+const MainPage: React.FC = () => {
 	const contactRef = useRef<HTMLDivElement>(null); // Referencja do elementu kontaktu
 
 	const handleContactClick = (): void => {
-		window?.scrollTo({ top: 10012, behavior: 'smooth' });
-	};
-
-	const handleArrowClick = (): void => {
-		const contact = contactRef.current;
-		if (contact) {
-			const contactTopOffset = contact.offsetTop;
-			window.scrollTo({ top: contactTopOffset, behavior: 'smooth' });
-		}
-
-	const contactRef = useRef<HTMLDivElement>(null);
-
-	const handleContactClick = () => {
 		contactRef.current?.scrollIntoView({ behavior: 'smooth' });
 	};
 
