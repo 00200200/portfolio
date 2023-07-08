@@ -4,6 +4,8 @@ import HamburgerMenu from './components/NavBar/HamburgerMenu';
 import MainPage from './components/MainPage/MainPage';
 import Projects from './components/Projects/Projects';
 import Contact from './components/contact/Contact';
+import { createRoot } from 'react-dom/client';
+
 const App: React.FC = () => {
 	return (
 		<div id='root' style={{ background: '323232' }}>
@@ -15,5 +17,8 @@ const App: React.FC = () => {
 	);
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
-export default App;
+const container = document.getElementById('root');
+if (container) {
+	const rootElement = createRoot(container);
+	rootElement.render(<App />);
+}

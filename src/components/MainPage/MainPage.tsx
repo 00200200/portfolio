@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './MainPage.css';
 
 const MainPage: React.FC = () => {
-	const handleContactClick = () => {
-		const contact = document.getElementById('contact') as HTMLDivElement;
-		contact?.scrollIntoView({ behavior: 'smooth' });
+	const contactRef = useRef<HTMLDivElement>(null); // Referencja do elementu kontaktu
+
+	const handleContactClick = (): void => {
+		window?.scrollTo({ top: 10012, behavior: 'smooth' });
 	};
-	const handleArrowClick = (): void => {};
+
+	const handleArrowClick = (): void => {
+		const contact = contactRef.current;
+		if (contact) {
+			const contactTopOffset = contact.offsetTop;
+			window.scrollTo({ top: contactTopOffset, behavior: 'smooth' });
+		}
+	};
+
 	return (
-		<div id='home' className='main-page'>
+		<section id='home' className='main-page'>
 			<div className='content'>
 				<div className='leftContent'>
 					<h1>Michał Furgała</h1>
@@ -29,10 +38,11 @@ const MainPage: React.FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className='scroll-down-arrow' onClick={handleArrowClick}>
+			<div className='scroll-down-arrow' onClick={handleContactClick}>
 				<span className='arrow'>&#8595;</span>
 			</div>
-		</div>
+			<div id='contact' ref={contactRef} />
+		</section>
 	);
 };
 

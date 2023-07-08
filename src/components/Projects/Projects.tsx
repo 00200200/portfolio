@@ -4,7 +4,7 @@ import './Projects.css';
 
 const Projects: React.FC = () => {
 	return (
-		<div id='projects' className='projects'>
+		<section id='projects' className='projects'>
 			<h1 className='projects-title'>Projects</h1>
 			<div className='projects-list'>
 				<Project />
@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
 				<Project />
 				<Project />
 			</div>
-		</div>
+		</section>
 	);
 };
 

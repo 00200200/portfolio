@@ -1,21 +1,23 @@
 import React from 'react';
-// import cvEng from './cv/cv_eng.pdf';
+import { FaDiscord, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdFileDownload, MdContentCopy } from 'react-icons/md';
+
+
 import './Contact.css';
 
 const Contact: React.FC = () => {
 	const handleDownloadCV = () => {
-		// window.open(cvEng, '_blank');
+		// window.open(CV, '_blank');
 	};
+
 	const handleCopyEmail = () => {
 		const eMail = 'mchfrg@gmail.com';
 		navigator.clipboard
 			.writeText(eMail)
 			.then(() => {
-				// Pomyślnie skopiowano adres e-mail do schowka
 				console.log('Adres e-mail został skopiowany!');
 			})
 			.catch(error => {
-				// Wystąpił błąd podczas kopiowania adresu e-mail
 				console.error('Błąd podczas kopiowania adresu e-mail:', error);
 			});
 	};
@@ -26,9 +28,10 @@ const Contact: React.FC = () => {
 
 			<div className='contact-buttons'>
 				{/* <a href='https://discord.com/' target='_blank' rel='noopener noreferrer' className='contact-button discord'>
-					Discord
-				</a> */}
+          Discord
+        </a> */}
 				<a href='mailto:mchfrg@gmail.com' target='_blank' rel='noopener noreferrer' className='contact-button email'>
+					<FaEnvelope className='button-icon' />
 					E-mail
 				</a>
 				<a
@@ -36,6 +39,7 @@ const Contact: React.FC = () => {
 					target='_blank'
 					rel='noopener noreferrer'
 					className='contact-button github'>
+					<FaGithub className='button-icon' />
 					GitHub
 				</a>
 				<a
@@ -43,13 +47,16 @@ const Contact: React.FC = () => {
 					target='_blank'
 					rel='noopener noreferrer'
 					className='contact-button linkedin'>
+					<FaLinkedin className='button-icon' />
 					LinkedIn
 				</a>
 				<button className='contact-button linkedin' onClick={handleDownloadCV}>
-					CV [ENG]
+					<MdFileDownload className='button-icon' />
+					CV [PL]
 				</button>
 				<button className='contact-button' onClick={handleCopyEmail}>
-					Copy E-Mail
+					<MdContentCopy className='button-icon' />
+					E-Mail
 				</button>
 			</div>
 		</section>
