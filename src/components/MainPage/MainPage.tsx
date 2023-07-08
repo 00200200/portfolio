@@ -5,7 +5,7 @@ const MainPage: React.FC = () => {
 	const contactRef = useRef<HTMLDivElement>(null); // Referencja do elementu kontaktu
 
 	const handleContactClick = (): void => {
-		contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+		window.scrollTo({top:11213, behavior: 'smooth' });
 	};
 
 	return (
