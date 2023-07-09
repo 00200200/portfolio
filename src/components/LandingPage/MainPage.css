@@ -68,6 +68,7 @@ a {
 	overflow: hidden;
 	transition: background-color 0.3s ease;
 	border: 1px solid var(--main-text-color);
+	cursor: pointer;
 }
 .scroll-button:hover {
 	background-color: var(--quaternary-color);

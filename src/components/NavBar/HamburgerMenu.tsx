@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import './HamburgerMenu.css';
 
@@ -18,7 +18,7 @@ const Navigation: React.FC = () => {
 	const handleScrollToSection = (id: string): void => {
 		if (id === 'home') {
 			window.scrollTo({ top: 0, behavior: 'smooth' });
-		} else if (id === 'contact') {
+		} else if (id === 'contact' || id === '#contact') {
 			window.scrollTo({ top: 10000, behavior: 'smooth' });
 		} else {
 			const section = document.getElementById(id) as HTMLDivElement;
@@ -56,9 +56,7 @@ const Navigation: React.FC = () => {
 					</Link>
 				</li>
 				<li onMouseDown={handleMenuItemClick}>
-					<Link to='/About' onClick={() => handleScrollToSection('contact')}>
-						About
-					</Link>
+					<Link to='/About'>About</Link>
 				</li>
 			</ul>
 		</div>

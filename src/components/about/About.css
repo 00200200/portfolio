@@ -1,0 +1,69 @@
+.container {
+	background-color: var(--primary-color);
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--main-text-color);
+}
+
+h1 {
+	text-align: center;
+	color: var(--main-text-color);
+}
+
+.leftSide {
+	width: 50%;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.rightSide {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.skillsList ul,
+.educationList ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.skillsList ul li,
+.educationList ul li {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.skillsList ul li::before,
+.educationList ul li::before {
+	content: '▹';
+	margin-right: 5px;
+	color: var(--main-text-color);
+}
+
+.skillsList ul li span,
+.educationList ul li span {
+	margin-right: 10px;
+	color: var(--main-text-color);
+}
+
+.skillsList ul li:last-child,
+.educationList ul li:last-child {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.leftSide,
+	.rightSide {
+		width: 100%;
+	}
+}

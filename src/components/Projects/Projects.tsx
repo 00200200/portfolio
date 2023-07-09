@@ -14,6 +14,7 @@ const Projects: React.FC = () => {
 		description:
 			'The project was done during my studies together with my friend to pass the Object-Oriented Programming course. The aim of the project was to simulate the spread of a virus worldwide, considering various factors.',
 		sourceCodeLink: 'https://github.com/00200200/PlagueInc',
+		liveLink: undefined,
 	};
 	const templateProjectData: ProjectProps = {
 		title: 'Project Title',
@@ -21,6 +22,7 @@ const Projects: React.FC = () => {
 		icons: ['SiJavascript'],
 		description: 'Project Description',
 		sourceCodeLink: 'Project Source Code Link',
+		liveLink: 'xd' ,
 	};
 
 	const handleArrowClick = (): void => {

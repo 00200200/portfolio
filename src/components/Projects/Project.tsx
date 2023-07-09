@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IconType } from 'react-icons';
-import { FaJava } from 'react-icons/fa'; // Przykładowe ikony, należy dodać importy odpowiednich ikon
-
+import { FaJava } from 'react-icons/fa';
+import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import './Project.css';
 
 export interface ProjectProps {
@@ -10,10 +10,10 @@ export interface ProjectProps {
 	icons: string[];
 	description: string;
 	sourceCodeLink: string | undefined;
+	liveLink?: string | undefined;
 }
 
 const getIconComponent = (iconName: string): IconType | null => {
-	// Mapowanie nazw ikon na komponenty ikon
 	switch (iconName) {
 		case 'FaJava':
 			return FaJava;
@@ -23,41 +23,35 @@ const getIconComponent = (iconName: string): IconType | null => {
 };
 
 const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
-	const { title, technologies, icons, description, sourceCodeLink } = props;
-	const [hovered, setHovered] = useState(false);
-	const [descriptionVisible, setDescriptionVisible] = useState(true);
+	const { title, technologies, icons, description, sourceCodeLink, liveLink } = props;
+	const [showInfo, setShowInfo] = useState(false);
+	const [isPageLocked, setIsPageLocked] = useState(false);
 
-	const handleClick = (link: string | undefined) => {
-		if (link) {
-			window.open(link, '_blank');
-		}
+	const handleCloseInfo = () => {
+		setShowInfo(false);
+		setIsPageLocked(false);
 	};
 
 	return (
-		<div
-			className={`project ${hovered ? 'hovered' : ''}`}
-			onMouseEnter={() => setHovered(true)}
-			onMouseLeave={() => setHovered(false)}>
-			<div className={`project-content`}>
+		<div className={`project ${isPageLocked ? 'disabled' : ''}`}>
+			<div className={`project-content ${showInfo ? 'project-info-open' : ''}`}>
 				<h1 className='project-title'>{title}</h1>
 				<p className='project-technologies'>{technologies}</p>
-				<p className={`project-description ${descriptionVisible ? 'visible' : ''}`}>{description}</p>
-
-				<div className='project-icons'>
-					{icons.map((iconName, index) => {
-						const IconComponent = getIconComponent(iconName);
-						return IconComponent ? (
-							<IconComponent key={index} className={`project-description ${descriptionVisible ? 'visible' : ''}`} />
-						) : null;
-					})}
-				</div>
-
-				<div className='project-links'>
-					<button className='source-button' onClick={() => handleClick(sourceCodeLink)}>
-						Source Code
+				{!showInfo && (
+					<button className='source-button' onClick={() => setShowInfo(true)}>
+						More Info
 					</button>
-					<button className='live-button source-button'>Live</button>
-				</div>
+				)}
+				{showInfo && (
+					<div className='project-info-overlay'>
+						<div className='project-info-container'>
+							<div className='project-info-close' onClick={handleCloseInfo}>
+								X
+							</div>
+							<ProjectInfo description={description} technologies={technologies} />
+						</div>
+					</div>
+				)}
 			</div>
 		</div>
 	);
