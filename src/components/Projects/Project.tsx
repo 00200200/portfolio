@@ -1,28 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { IconType } from 'react-icons';
+import { FaJava } from 'react-icons/fa'; // Przykładowe ikony, należy dodać importy odpowiednich ikon
+
 import './Project.css';
 
-interface ProjectProps {
+export interface ProjectProps {
 	title: string;
-	name: string;
+	technologies: string;
+	icons: string[];
 	description: string;
-	image: string | undefined;
+	sourceCodeLink: string | undefined;
 }
 
-const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
-	const { title, name, description, image } = props;
+const getIconComponent = (iconName: string): IconType | null => {
+	// Mapowanie nazw ikon na komponenty ikon
+	switch (iconName) {
+		case 'FaJava':
+			return FaJava;
+		default:
+			return null;
+	}
+};
 
-	const projectStyle = {
-		backgroundImage: `url(${image})`,
+const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
+	const { title, technologies, icons, description, sourceCodeLink } = props;
+	const [hovered, setHovered] = useState(false);
+	const [descriptionVisible, setDescriptionVisible] = useState(true);
+
+	const handleClick = (link: string | undefined) => {
+		if (link) {
+			window.open(link, '_blank');
+		}
 	};
 
 	return (
-		<div className='project' style={projectStyle}>
-			<div className='project-content'>
+		<div
+			className={`project ${hovered ? 'hovered' : ''}`}
+			onMouseEnter={() => setHovered(true)}
+			onMouseLeave={() => setHovered(false)}>
+			<div className={`project-content`}>
 				<h1 className='project-title'>{title}</h1>
-				<p className='project-name'>{name}</p>
-				<p className='project-description'>{description}</p>
+				<p className='project-technologies'>{technologies}</p>
+				<p className={`project-description ${descriptionVisible ? 'visible' : ''}`}>{description}</p>
+
+				<div className='project-icons'>
+					{icons.map((iconName, index) => {
+						const IconComponent = getIconComponent(iconName);
+						return IconComponent ? (
+							<IconComponent key={index} className={`project-description ${descriptionVisible ? 'visible' : ''}`} />
+						) : null;
+					})}
+				</div>
+
+				<div className='project-links'>
+					<button className='source-button' onClick={() => handleClick(sourceCodeLink)}>
+						Source Code
+					</button>
+					<button className='live-button source-button'>Live</button>
+				</div>
 			</div>
-			<div className='project-links'></div>
 		</div>
 	);
 };

@@ -17,7 +17,7 @@ const LandingPage: React.FC = () => {
 				<div className='leftContent'>
 					<h1>Michał Furgała</h1>
 					<h2>Witaj na mojej stronie</h2>
-					<button className='contact-button' onClick={handleContactClick}>
+					<button className='scroll-button' onClick={handleContactClick}>
 						Contact
 					</button>
 				</div>

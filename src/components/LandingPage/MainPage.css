@@ -54,22 +54,26 @@ a {
 	text-decoration: none;
 }
 
-.contact-button {
+.scroll-button {
+	display: inline-block;
 	padding: 10px 20px;
 	font-size: 18px;
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--main-text-color);
+	background-color: var(--secondary-color);
+	border: none;
 	border-radius: 5px;
-	background-color: var(--primary-color);
+	position: relative;
+	overflow: hidden;
+	transition: background-color 0.3s ease;
 	border: 1px solid var(--main-text-color);
-
-	color: white;
-	cursor: pointer;
 }
-.contact-button:hover {
+.scroll-button:hover {
 	background-color: var(--quaternary-color);
 	transition: 1s ease-in-out;
 }
-
-.arrow {
+*/ .arrow {
 	font-size: 32px;
 }
 
