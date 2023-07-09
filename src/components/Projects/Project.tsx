@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { IconType } from 'react-icons';
 import { FaJava } from 'react-icons/fa';
 import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import './Project.css';
@@ -13,16 +12,7 @@ export interface ProjectProps {
 	liveLink?: string | undefined;
 }
 
-const getIconComponent = (iconName: string): IconType | null => {
-	switch (iconName) {
-		case 'FaJava':
-			return FaJava;
-		default:
-			return null;
-	}
-};
-
-const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
+const Project: React.FC<ProjectProps> = props => {
 	const { title, technologies, icons, description, sourceCodeLink, liveLink } = props;
 	const [showInfo, setShowInfo] = useState(false);
 	const [isPageLocked, setIsPageLocked] = useState(false);
@@ -38,7 +28,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
 				<h1 className='project-title'>{title}</h1>
 				<p className='project-technologies'>{technologies}</p>
 				{!showInfo && (
-					<button className='source-button' onClick={() => setShowInfo(true)}>
+					<button className='button' onClick={() => setShowInfo(true)}>
 						More Info
 					</button>
 				)}
@@ -48,7 +38,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
 							<div className='project-info-close' onClick={handleCloseInfo}>
 								X
 							</div>
-							<ProjectInfo description={description} technologies={technologies} />
+							<ProjectInfo props={props} description={description} technologies={technologies} />
 						</div>
 					</div>
 				)}

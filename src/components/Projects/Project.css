@@ -2,7 +2,7 @@
 
 .project {
 	width: 40vw;
-	height: 30vh;
+	min-height: 30vh;
 	margin: 20px auto;
 	padding: 20px;
 	text-align: center;
@@ -84,7 +84,7 @@
 	transition: transform 0.3s ease-in-out;
 }
 
-.source-button {
+.button {
 	display: inline-block;
 	padding: 10px 20px;
 	font-size: 18px;
@@ -100,8 +100,7 @@
 	border: 1px solid var(--main-text-color);
 	cursor: pointer;
 }
-
-.source-button:hover {
+button:hover {
 	background-color: var(--quaternary-color);
 }
 
