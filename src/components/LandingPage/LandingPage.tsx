@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import './MainPage.css';
+import SkillsCarousel from '../SkillsComponent/Skills';
 
 const LandingPage: React.FC = () => {
 	const contactRef = useRef<HTMLDivElement>(null); // Referencja do elementu kontaktu
@@ -7,6 +8,7 @@ const LandingPage: React.FC = () => {
 	const handleContactClick = (): void => {
 		window.scrollTo({ top: 11213, behavior: 'smooth' });
 	};
+
 	const handleArrowClick = (): void => {
 		window.scrollTo({ top: window.innerHeight * 0.9, behavior: 'smooth' });
 	};
@@ -16,22 +18,22 @@ const LandingPage: React.FC = () => {
 			<div className='content'>
 				<div className='leftContent'>
 					<h1>Michał Furgała</h1>
-					<h2>Witaj na mojej stronie</h2>
-					<button className='scroll-button' onClick={handleContactClick}>
+					<h2>Passionate Computer Science Student</h2>
+					<p>
+						I am a computer science student at the{' '}
+						<a className='text-link' href='https://pwr.edu.pl'>
+							Wrocław University of Technology.
+						</a>{' '}
+						Due to my interests, I am learning about Programming
+					</p>
+
+					<button className='button' onClick={handleContactClick}>
 						Contact
 					</button>
 				</div>
-				{/* <div className='rightContent'> */}
-				{/* <h1>About me</h1>
-					<div className='rightTextContent'>
-						<p>
-							Jestem studentem informatyki na <a href='#'>Politechnice Wrocławskiej</a>, gdzie zdobywam wiedzę z zakresu
-							bleblebleble <a href='#'>tetetee</a>, dasddasda, Lorem, ipsum dolor. Lorem, ipsum dolor sit amet
-							consectetur adipisicing elit. Quos, mollitia! Lorem ipsum dolor sit. <a href='#'>Lorem, ipsum.</a> Lorem
-							ipsum dolor sit amet consectetur adipisicing elit.s
-						</p>
-					</div> */}
-				{/* </div> */}
+			</div>
+			<div className='carouselle'>
+				<SkillsCarousel></SkillsCarousel>
 			</div>
 			<div className='scroll-down-arrow' onClick={handleArrowClick}>
 				<span className='arrow'>&#8595;</span>

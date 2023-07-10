@@ -24,35 +24,11 @@
 	margin-top: 30px;
 }
 
-.contact-button {
-	display: inline-block;
-	padding: 10px 20px;
-	font-size: 18px;
-	font-weight: 700;
-	text-decoration: none;
-	color: var(--main-text-color);
-	background-color: var(--secondary-color);
-	border: none;
-	border-radius: 5px;
-	position: relative;
-	overflow: hidden;
-	transition: background-color 0.3s ease;
-	padding-left: 40px;
-}
-
-.contact-button .button-icon {
+.button .button-icon {
 	position: absolute;
 	top: 50%;
 	left: 10px;
 	transform: translateY(-50%);
-}
-
-.contact-button:hover {
-	background-color: var(--quaternary-color);
-}
-
-.contact-button:hover .button-icon {
-	animation: icon-bounce 0.3s ease-in-out;
 }
 
 @keyframes icon-bounce {
@@ -66,7 +42,9 @@
 		transform: translateY(-50%);
 	}
 }
-
+.contact-buttons .button {
+	padding-left: 40px;
+}
 
 @media (max-width: 767px) {
 	.contact-buttons {
@@ -74,7 +52,7 @@
 		align-items: center;
 	}
 
-	.contact-button {
+	.button {
 		margin-top: 10px;
 	}
 }

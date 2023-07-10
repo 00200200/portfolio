@@ -1,7 +1,6 @@
 import React from 'react';
-import { FaDiscord, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdFileDownload, MdContentCopy } from 'react-icons/md';
-
 
 import './Contact.css';
 
@@ -27,18 +26,14 @@ const Contact: React.FC = () => {
 			<h2>Contact</h2>
 
 			<div className='contact-buttons'>
-				{/* <a href='https://discord.com/' target='_blank' rel='noopener noreferrer' className='contact-button discord'>
+				{/* <a href='https://discord.com/' target='_blank' rel='noopener noreferrer' className='button discord'>
           Discord
         </a> */}
-				<a href='mailto:mchfrg@gmail.com' target='_blank' rel='noopener noreferrer' className='contact-button email'>
+				<a href='mailto:mchfrg@gmail.com' target='_blank' rel='noopener noreferrer' className='button email'>
 					<FaEnvelope className='button-icon' />
 					E-mail
 				</a>
-				<a
-					href='https://github.com/00200200'
-					target='_blank'
-					rel='noopener noreferrer'
-					className='contact-button github'>
+				<a href='https://github.com/00200200' target='_blank' rel='noopener noreferrer' className='button github'>
 					<FaGithub className='button-icon' />
 					GitHub
 				</a>
@@ -46,15 +41,15 @@ const Contact: React.FC = () => {
 					href='https://www.linkedin.com/in/micha%C5%82-furga%C5%82a/'
 					target='_blank'
 					rel='noopener noreferrer'
-					className='contact-button linkedin'>
+					className='button linkedin'>
 					<FaLinkedin className='button-icon' />
 					LinkedIn
 				</a>
-				<button className='contact-button linkedin' onClick={handleDownloadCV}>
+				<button className='button linkedin' onClick={handleDownloadCV}>
 					<MdFileDownload className='button-icon' />
 					CV [PL]
 				</button>
-				<button className='contact-button' onClick={handleCopyEmail}>
+				<button className='button' onClick={handleCopyEmail}>
 					<MdContentCopy className='button-icon' />
 					E-Mail
 				</button>

@@ -1,0 +1,61 @@
+.skills-carousel {
+	border: 3px solid var(--main-blue);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 33.33%;
+	text-align: center;
+	padding: 20px;
+}
+
+.carousel-item.slide-in {
+	transform: translateX(0); 
+}
+
+.carousel-item.slide-out-left {
+	transform: translateX(-100%); 
+}
+
+.carousel-item.slide-out-right {
+	transform: translateX(100%);
+}
+
+.skill-icon {
+	color: var(--primary-color);
+	font-size: 48px;
+}
+
+.carousel-button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	outline: none;
+	color: var(--main-text-color);
+	font-size: 24px;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+}
+
+.carousel-button:hover {
+	color: var(--main-blue);
+}
+
+.carousel-button:first-child {
+	left: 10px;
+}
+
+.carousel-button:last-child {
+	right: 10px;
+}

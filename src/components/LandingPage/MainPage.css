@@ -13,16 +13,19 @@
 }
 
 .content {
+	margin-top: -10%;
 	width: 100%;
 	text-align: center;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20vh;
 }
 .leftContent {
-	margin-left: 5vw;
+	margin-bottom: 5vh;
 	width: 40vw;
 	color: var(--main-text-color);
-	text-align: left;
 }
 .rightContent {
 	width: 40vw;
@@ -39,12 +42,12 @@ h1 {
 }
 
 h2 {
-	color: var(--quaternary-color);
+	color: var(--main-text-color);
 	font-size: 24px;
 	margin-bottom: 20px;
 }
 p {
-	color: var(--quaternary-color);
+	color: #bfbebe;
 }
 a {
 	color: var(--main-text-color);
@@ -53,8 +56,13 @@ a {
 .menu-items li a {
 	text-decoration: none;
 }
+.text-link {
+	color: var(--main-blue);
+	text-decoration: none;
+}
 
 .scroll-button {
+	margin-top: 5%;
 	display: inline-block;
 	padding: 10px 20px;
 	font-size: 18px;
@@ -116,4 +124,8 @@ a {
 .main-page:hover .scroll-down-arrow {
 	transform: translateX(-50%) scale(1.1);
 	transition: transform 0.3s ease-in-out;
+}
+.carouselle {
+	width: 100%;
+	background: var(--quaternary-color);
 }
