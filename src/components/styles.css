@@ -1,10 +1,10 @@
 :root {
 	--primary-color: #151515;
 	--secondary-color: #212121;
-	--quaternary-color: #646464;
-	--main-text-color: #ffffff;
-	--main-blue: #0d7377;
-	--light-blue: #14ffec;
+	--quaternary-color: #777777;
+	--header-color: #fffcfc;
+	--main-text-color: #d8d8d8;
+	--main-blue: #6495ed;
 }
 
 .button {
@@ -14,8 +14,8 @@
 	font-size: 18px;
 	font-weight: 700;
 	text-decoration: none;
-	color: var(--main-text-color);
-	background-color: var(--secondary-color);
+	color: var(--main-blue);
+	background-color: var(--primary-color);
 	border: none;
 	border-radius: 5px;
 	position: relative;

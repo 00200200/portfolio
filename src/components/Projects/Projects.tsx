@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
 		icons: ['SiJavascript'],
 		description: 'Project Description',
 		sourceCodeLink: 'Project Source Code Link',
-		liveLink: 'xd' ,
+		liveLink: 'xd',
 	};
 
 	const handleArrowClick = (): void => {

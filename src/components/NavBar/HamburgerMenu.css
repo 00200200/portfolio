@@ -44,8 +44,6 @@
 	font-size: 16px;
 }
 
-
-
 @media (max-width: 767px) {
 	.open {
 		width: 100vw;
@@ -118,4 +116,6 @@
 		margin-bottom: 0;
 	}
 }
-
+.link-item {
+	color: (var(--main-blue));
+}

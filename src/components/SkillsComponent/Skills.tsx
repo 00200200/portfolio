@@ -13,9 +13,9 @@ const SkillsCarousel: React.FC = () => {
 		{ icon: <SiJavascript className='skill-icon' />, name: 'JavaScript' },
 		{ icon: <SiTypescript className='skill-icon' />, name: 'TypeScript' },
 		{ icon: <SiMongodb className='skill-icon' />, name: 'MongoDB' },
-		{ icon: <SiSass className='skill-icon' />, name: 'SCSS' },
-		{ icon: <SiMysql className='skill-icon' />, name: 'MySQL' },
-		{ icon: <AiFillDatabase className='skill-icon' />, name: 'SQL' },
+		// { icon: <SiSass className='skill-icon' />, name: 'SCSS' },
+		// { icon: <SiMysql className='skill-icon' />, name: 'MySQL' },
+		// { icon: <AiFillDatabase className='skill-icon' />, name: 'SQL' },
 	];
 
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -29,11 +29,29 @@ const SkillsCarousel: React.FC = () => {
 	}, [skills.length]);
 
 	const goToNextSlide = () => {
-		setCurrentSlide(prevSlide => (prevSlide + 1) % (skills.length - 2));
+		const nextSlide = (currentSlide + 1) % (skills.length - 2);
+		setCurrentSlide(nextSlide);
+		const carouselItems = document.querySelectorAll('.carousel-item');
+		carouselItems.forEach((item, index) => {
+			if (index === nextSlide) {
+				item.classList.add('slide-in');
+			} else {
+				item.classList.remove('slide-in');
+			}
+		});
 	};
 
 	const goToPreviousSlide = () => {
-		setCurrentSlide(prevSlide => (prevSlide - 1 + (skills.length - 2)) % (skills.length - 2));
+		const previousSlide = (currentSlide - 1 + (skills.length - 2)) % (skills.length - 2);
+		setCurrentSlide(previousSlide);
+		const carouselItems = document.querySelectorAll('.carousel-item');
+		carouselItems.forEach((item, index) => {
+			if (index === previousSlide) {
+				item.classList.add('slide-in');
+			} else {
+				item.classList.remove('slide-in');
+			}
+		});
 	};
 
 	return (
@@ -41,10 +59,10 @@ const SkillsCarousel: React.FC = () => {
 			<button className='carousel-button' onClick={goToPreviousSlide}>
 				{'<'}
 			</button>
-			{skills.slice(currentSlide, currentSlide + 3).map((skill, index) => (
+			{skills.slice(currentSlide, currentSlide + 5).map((skill, index) => (
 				<div key={index} className='carousel-item'>
 					{skill.icon}
-					<p>{skill.name}</p>
+					{/* <p>{skill.name}</p> */}
 				</div>
 			))}
 			<button className='carousel-button' onClick={goToNextSlide}>

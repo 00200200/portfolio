@@ -17,27 +17,30 @@ const LandingPage: React.FC = () => {
 		<section id='home' className='main-page'>
 			<div className='content'>
 				<div className='leftContent'>
-					<h1>Michał Furgała</h1>
-					<h2>Passionate Computer Science Student</h2>
-					<p>
-						I am a computer science student at the{' '}
-						<a className='text-link' href='https://pwr.edu.pl'>
-							Wrocław University of Technology.
-						</a>{' '}
-						Due to my interests, I am learning about Programming
-					</p>
+					<div className='textContainer'>
+						<p>Hi, my name is</p>
+						<h1>Michał Furgała</h1>
+						<h2>Full-Stack Developer</h2>
+						<p className='mainPageText'>
+							I am a computer science student at the{' '}
+							<a className='text-link' href='https://pwr.edu.pl'>
+								Wrocław University of Technology.
+							</a>{' '}
+							Due to my interests, I am learning about Programming
+						</p>
 
-					<button className='button' onClick={handleContactClick}>
-						Contact
-					</button>
+						<button className='button' onClick={handleContactClick}>
+							Contact
+						</button>
+					</div>
 				</div>
 			</div>
 			<div className='carouselle'>
 				<SkillsCarousel></SkillsCarousel>
 			</div>
-			<div className='scroll-down-arrow' onClick={handleArrowClick}>
+			{/* <div className='scroll-down-arrow' onClick={handleArrowClick}>
 				<span className='arrow'>&#8595;</span>
-			</div>
+			</div> */}
 			<div id='contact' ref={contactRef} />
 		</section>
 	);

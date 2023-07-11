@@ -1,5 +1,5 @@
 .skills-carousel {
-	border: 3px solid var(--main-blue);
+	/* border: 3px solid var(--main-blue); */
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -7,6 +7,7 @@
 	white-space: nowrap;
 	position: relative;
 	transition: transform 0.5s ease-in-out;
+	background-color: var(--primary-color);
 }
 
 .carousel-item {
@@ -19,11 +20,11 @@
 }
 
 .carousel-item.slide-in {
-	transform: translateX(0); 
+	transform: translateX(0);
 }
 
 .carousel-item.slide-out-left {
-	transform: translateX(-100%); 
+	transform: translateX(-100%);
 }
 
 .carousel-item.slide-out-right {
@@ -31,7 +32,7 @@
 }
 
 .skill-icon {
-	color: var(--primary-color);
+	color: var(--main-text-color);
 	font-size: 48px;
 }
 

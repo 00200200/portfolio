@@ -5,7 +5,7 @@ import './HamburgerMenu.css';
 
 const Navigation: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const navigationRef = useRef<HTMLDivElement>(null); 
+	const navigationRef = useRef<HTMLDivElement>(null);
 
 	const toggleMenu = (): void => {
 		setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
@@ -56,7 +56,9 @@ const Navigation: React.FC = () => {
 					</Link>
 				</li>
 				<li onMouseDown={handleMenuItemClick}>
-					<Link className='link-item' to='/About'>About</Link>
+					<Link className='link-item' to='/About'>
+						About
+					</Link>
 				</li>
 			</ul>
 		</div>
