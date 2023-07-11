@@ -1,69 +1,100 @@
-.container {
-	background-color: var(--primary-color);
+#about {
 	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	background-color: var(--primary-color);
 	color: var(--main-text-color);
-}
-
-h1 {
-	text-align: center;
-	color: var(--main-text-color);
-}
-
-.leftSide {
-	width: 50%;
-	padding: 0 20px;
-	box-sizing: border-box;
-}
-
-.rightSide {
-	width: 50%;
+	padding-top: 100px; 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 }
 
-.skillsList ul,
-.educationList ul {
-	list-style-type: none;
-	padding: 0;
+.aboutWrapper {
+	padding-top: 10vh;
 }
 
-.skillsList ul li,
-.educationList ul li {
-	margin-bottom: 10px;
+#about h3 {
+	text-align: center;
+	font-size: 2.5rem;
+	color: var(--header-color);
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+.container {
+	margin-top: 5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 90%;
+	max-width: 1000px;
+}
+
+.leftSide {
+	width: 100%;
+	max-width: 600px;
+	margin-bottom: 2rem;
+}
+
+.rightSide {
+	width: 100%;
+	max-width: 400px;
+}
+
+p {
+	color: var(--main-text-color);
+}
+
+.about-skill-item {
 	display: flex;
 	align-items: center;
-}
-
-.skillsList ul li::before,
-.educationList ul li::before {
-	content: '▹';
-	margin-right: 5px;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
 	color: var(--main-text-color);
+	width: 100%;
+	max-width: 20rem;
 }
 
-.skillsList ul li span,
-.educationList ul li span {
-	margin-right: 10px;
-	color: var(--main-text-color);
+.about-skill-icon {
+	margin-right: 0.5rem;
+	font-size: 1.5rem;
+	color: var(--main-blue);
 }
 
-.skillsList ul li:last-child,
-.educationList ul li:last-child {
-	margin-bottom: 0;
+.skill-container {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) {
+	.container {
+		width: 80%;
+	}
+
+	.leftSide {
+		width: 45%;
+		margin-bottom: 0;
+	}
+
+	.rightSide {
+		width: 45%;
+		margin-left: auto;
+	}
+}
+@media (max-width: 768px) {
 	.container {
 		flex-direction: column;
 	}
 
-	.leftSide,
+	.leftSide {
+		width: 100%;
+	}
+
 	.rightSide {
 		width: 100%;
+		margin-left: 0;
+		margin-top: 2rem;
 	}
 }

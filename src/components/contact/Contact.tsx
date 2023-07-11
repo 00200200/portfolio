@@ -26,9 +26,6 @@ const Contact: React.FC = () => {
 			<h2>Contact</h2>
 
 			<div className='contact-buttons'>
-				{/* <a href='https://discord.com/' target='_blank' rel='noopener noreferrer' className='button discord'>
-          Discord
-        </a> */}
 				<a href='mailto:mchfrg@gmail.com' target='_blank' rel='noopener noreferrer' className='button email'>
 					<FaEnvelope className='button-icon' />
 					E-mail

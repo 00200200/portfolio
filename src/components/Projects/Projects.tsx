@@ -25,21 +25,16 @@ const Projects: React.FC = () => {
 		liveLink: 'xd',
 	};
 
-	const handleArrowClick = (): void => {
-		window.scrollTo({ top: window.innerHeight * 0.9, behavior: 'smooth' });
-	};
 	return (
 		<section id='projects' className='projects'>
-			<h1 className='projects-title'>Projects</h1>
+			<h3>PROJECTS</h3>
 			<div className='projects-list'>
 				<Project {...projectData} />
 				<Project {...templateProjectData} />
 				<Project {...templateProjectData} />
 				<Project {...templateProjectData} />
 			</div>
-			<div className='scroll-down-arrow' onClick={handleArrowClick}>
-				<span className='arrow'>&#8595;</span>
-			</div>
+
 		</section>
 	);
 };

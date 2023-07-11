@@ -6,7 +6,7 @@
 	margin: 20px auto;
 	padding: 20px;
 	text-align: center;
-	background-color: var(--secondary-color);
+	background-color: var(--primary-color);
 	border: 1px solid var(--main-blue);
 	border-radius: 5px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,8 @@
 	font-size: 24px;
 	margin-top: 30px;
 	margin-bottom: 10px;
-	color: var(--main-text-color);
+	color: var(--header-color);
+	text-align: center;
 }
 
 .project-technologies {

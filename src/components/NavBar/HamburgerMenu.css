@@ -43,6 +43,10 @@
 	margin-bottom: 10px;
 	font-size: 16px;
 }
+.menu-items li:hover {
+	color: var(--main-blue);
+	transition: 0.4s;
+}
 
 @media (max-width: 767px) {
 	.open {
@@ -56,6 +60,7 @@
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
+		overflow: hidden;
 	}
 
 	.menu-items li {
@@ -109,6 +114,7 @@
 		opacity: 1;
 		transform: translateY(0);
 		margin-top: 0;
+		overflow: visible;
 	}
 
 	.menu-items li {
@@ -117,5 +123,10 @@
 	}
 }
 .link-item {
+	color: (var(--main-blue));
+	font-size: 2rem;
+}
+
+.link-item:hover {
 	color: (var(--main-blue));
 }

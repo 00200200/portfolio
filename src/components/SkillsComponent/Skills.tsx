@@ -12,8 +12,8 @@ const SkillsCarousel: React.FC = () => {
 		{ icon: <FaReact className='skill-icon' />, name: 'React' },
 		{ icon: <SiJavascript className='skill-icon' />, name: 'JavaScript' },
 		{ icon: <SiTypescript className='skill-icon' />, name: 'TypeScript' },
-		{ icon: <SiMongodb className='skill-icon' />, name: 'MongoDB' },
-		// { icon: <SiSass className='skill-icon' />, name: 'SCSS' },
+		{ icon: <SiSass className='skill-icon' />, name: 'SCSS' },
+		// { icon: <SiMongodb className='skill-icon' />, name: 'MongoDB' },
 		// { icon: <SiMysql className='skill-icon' />, name: 'MySQL' },
 		// { icon: <AiFillDatabase className='skill-icon' />, name: 'SQL' },
 	];

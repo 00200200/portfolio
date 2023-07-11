@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { FiHome, FiCode, FiMail, FiUser } from 'react-icons/fi';
+
+import './HamburgerMenu.css';
 
 import './HamburgerMenu.css';
 
@@ -41,23 +44,23 @@ const Navigation: React.FC = () => {
 			<ul className={`menu-items ${isMenuOpen ? 'open' : ''}`}>
 				<li onMouseDown={handleMenuItemClick}>
 					<Link className='link-item' onClick={() => handleScrollToSection('home')} to='/'>
-						Home
+						<FiHome className='link-item' />
 					</Link>
 				</li>
 				<li onMouseDown={handleMenuItemClick}>
 					<Link className='link-item' onClick={() => handleScrollToSection('projects')} to='/#projects'>
-						Projects
+						<FiCode className='link-item' />
 					</Link>
 				</li>
 
 				<li onMouseDown={handleMenuItemClick}>
-					<Link className='link-item' onClick={() => handleScrollToSection('contact')} to='/#contact'>
-						Contact
+					<Link className='link-item' onClick={() => handleScrollToSection('about')} to='/#about'>
+						<FiUser className='link-item' />
 					</Link>
 				</li>
 				<li onMouseDown={handleMenuItemClick}>
-					<Link className='link-item' to='/About'>
-						About
+					<Link className='link-item' onClick={() => handleScrollToSection('contact')} to='/#contact'>
+						<FiMail className='link-item' />
 					</Link>
 				</li>
 			</ul>

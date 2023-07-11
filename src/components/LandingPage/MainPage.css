@@ -1,4 +1,5 @@
 .main-page {
+	width: 100%;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -49,19 +50,20 @@ h2 {
 	font-size: 64px;
 	margin-bottom: 20px;
 }
-p {
+.mainPageParagraph {
 	margin: 1rem 0;
 	color: var(--main-blue);
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 }
 .mainPageText {
 	color: var(--main-text-color);
 	width: 35vw;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 }
 a {
 	color: var(--main-text-color);
 	text-decoration: underline;
+	font-size: 1.6rem;
 }
 .menu-items li a {
 	text-decoration: none;
