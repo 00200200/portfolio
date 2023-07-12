@@ -67,25 +67,6 @@
 	}
 }
 
-.scroll-down-arrow {
-	color: var(--main-text-color);
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	cursor: pointer;
-	transition: transform 0.3s ease-in-out;
-}
-
-.scroll-down-arrow:hover {
-	transform: translateX(-50%) scale(1.1);
-}
-
-.main-page:hover .scroll-down-arrow {
-	transform: translateX(-50%) scale(1.1);
-	transition: transform 0.3s ease-in-out;
-}
-
 button:hover {
 	background-color: var(--quaternary-color);
 }
@@ -100,7 +81,9 @@ button:hover {
 
 .project-icon {
 	font-size: 28px;
-	color: var(--main-text-color);
+	/* padding: 2rem; */
+	margin: 2rem;
+	color: var(--main-blue);
 }
 
 .disabled {

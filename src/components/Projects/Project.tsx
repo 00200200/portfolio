@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
+import { IconType } from 'react-icons';
 import { FaJava } from 'react-icons/fa';
+import { SiGradle } from 'react-icons/si';
 import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import './Project.css';
+
+const iconComponents: { [key: string]: IconType } = {
+	FaJava: FaJava,
+	SiGradle: SiGradle,
+};
 
 export interface ProjectProps {
 	title: string;
@@ -26,7 +33,16 @@ const Project: React.FC<ProjectProps> = props => {
 		<div className={`project ${isPageLocked ? 'disabled' : ''}`}>
 			<div className={`project-content ${showInfo ? 'project-info-open' : ''}`}>
 				<h1 className='project-title'>{title}</h1>
-				<p className='project-technologies'>{technologies}</p>
+				<div className='project-technologies'>
+					{icons.map((icon, index) => {
+						const IconComponent = iconComponents[icon];
+						if (IconComponent) {
+							return <IconComponent key={index} className='project-icon' />;
+						} else {
+							return null; // Jeśli przekazano nieznany typ ikony, można zwrócić null lub dodać odpowiednią obsługę
+						}
+					})}
+				</div>
 				{!showInfo && (
 					<button className='button' onClick={() => setShowInfo(true)}>
 						More Info

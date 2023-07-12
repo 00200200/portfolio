@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
 	const projectData: ProjectProps = {
 		title: 'Virus Simulation',
 		technologies: 'JAVA,JAVAFX,GRADLE',
-		icons: ['FaJava'],
+		icons: ['FaJava','SiGradle'],
 		description:
 			'The project was done during my studies together with my friend to pass the Object-Oriented Programming course. The aim of the project was to simulate the spread of a virus worldwide, considering various factors.',
 		sourceCodeLink: 'https://github.com/00200200/PlagueInc',

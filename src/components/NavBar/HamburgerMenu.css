@@ -60,7 +60,7 @@
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		overflow: hidden;
+		/* display: none; */
 	}
 
 	.menu-items li {
@@ -114,7 +114,7 @@
 		opacity: 1;
 		transform: translateY(0);
 		margin-top: 0;
-		overflow: visible;
+		overflow: auto;
 	}
 
 	.menu-items li {

@@ -13,7 +13,6 @@ const Navigation: React.FC = () => {
 	const toggleMenu = (): void => {
 		setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
 	};
-
 	const handleMenuItemClick = (): void => {
 		setIsMenuOpen(false);
 	};
@@ -42,23 +41,23 @@ const Navigation: React.FC = () => {
 				<span className='line' />
 			</button>
 			<ul className={`menu-items ${isMenuOpen ? 'open' : ''}`}>
-				<li onMouseDown={handleMenuItemClick}>
+				<li className='li-item' onMouseDown={handleMenuItemClick}>
 					<Link className='link-item' onClick={() => handleScrollToSection('home')} to='/'>
 						<FiHome className='link-item' />
 					</Link>
 				</li>
-				<li onMouseDown={handleMenuItemClick}>
+				<li className='li-item' onMouseDown={handleMenuItemClick}>
 					<Link className='link-item' onClick={() => handleScrollToSection('projects')} to='/#projects'>
 						<FiCode className='link-item' />
 					</Link>
 				</li>
 
-				<li onMouseDown={handleMenuItemClick}>
+				<li className='li-item' onMouseDown={handleMenuItemClick}>
 					<Link className='link-item' onClick={() => handleScrollToSection('about')} to='/#about'>
 						<FiUser className='link-item' />
 					</Link>
 				</li>
-				<li onMouseDown={handleMenuItemClick}>
+				<li className='li-item' onMouseDown={handleMenuItemClick}>
 					<Link className='link-item' onClick={() => handleScrollToSection('contact')} to='/#contact'>
 						<FiMail className='link-item' />
 					</Link>
