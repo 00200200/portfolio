@@ -130,3 +130,7 @@
 .link-item:hover {
 	color: (var(--main-blue));
 }
+
+.nav-language-container {
+	padding-left: auto;
+}

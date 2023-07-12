@@ -22,36 +22,40 @@ const Contact: React.FC = () => {
 	};
 
 	return (
-		<section id='contact' className='contact-section'>
-			<h2>Contact</h2>
-
-			<div className='contact-buttons'>
-				<a href='mailto:mchfrg@gmail.com' target='_blank' rel='noopener noreferrer' className='button email'>
-					<FaEnvelope className='button-icon' />
-					E-mail
-				</a>
-				<a href='https://github.com/00200200' target='_blank' rel='noopener noreferrer' className='button github'>
-					<FaGithub className='button-icon' />
-					GitHub
-				</a>
-				<a
-					href='https://www.linkedin.com/in/micha%C5%82-furga%C5%82a/'
-					target='_blank'
-					rel='noopener noreferrer'
-					className='button linkedin'>
-					<FaLinkedin className='button-icon' />
-					LinkedIn
-				</a>
-				<button className='button linkedin' onClick={handleDownloadCV}>
-					<MdFileDownload className='button-icon' />
-					CV [PL]
-				</button>
-				<button className='button' onClick={handleCopyEmail}>
-					<MdContentCopy className='button-icon' />
-					E-Mail
-				</button>
-			</div>
-		</section>
+			<section id='contact' className='contactContainer'>
+				<div className='contact-header'>
+					<h3>CONTACT</h3>
+				</div>
+				<div className='contact-section'>
+					<h4>Feel free to contact me</h4>
+					<div className='contact-buttons'>
+						<a href='mailto:mchfrg@gmail.com' target='_blank' rel='noopener noreferrer' className='button email'>
+							<FaEnvelope className='button-icon' />
+							E-mail
+						</a>
+						<a href='https://github.com/00200200' target='_blank' rel='noopener noreferrer' className='button github'>
+							<FaGithub className='button-icon' />
+							GitHub
+						</a>
+						<a
+							href='https://www.linkedin.com/in/micha%C5%82-furga%C5%82a/'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='button linkedin'>
+							<FaLinkedin className='button-icon' />
+							LinkedIn
+						</a>
+						<button className='button linkedin' onClick={handleDownloadCV}>
+							<MdFileDownload className='button-icon' />
+							CV [PL]
+						</button>
+						<button className='button' onClick={handleCopyEmail}>
+							<MdContentCopy className='button-icon' />
+							E-Mail
+						</button>
+					h</div>
+				</div>
+			</section>
 	);
 };
 

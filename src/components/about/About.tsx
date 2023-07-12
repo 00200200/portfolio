@@ -12,19 +12,23 @@ const About: React.FC = () => {
 			{/* <Link className='link-item' to='/'>
         <FiHome className='link-item' />
       </Link> */}
-			<div className='aboutWrapper'>
+
+			<h3>ABOUT ME</h3>
+			
+
+
 				<div className='aboutContainer'>
-					<h3>ABOUT ME</h3>
 					<div className='container'>
 						<div className='leftSide'>
 							<div>
 								<p>
-									Hello, my name is Michał. I am a second-year Computer Science student at the University of Science and
-									Technology Wroclaw.
-									<br></br>
+									Hello, my name is Michał. I am a second-year Computer Science student at the{' '}
+									<a>University of Science and Technology Wroclaw</a>.<br></br>
 									<br></br>I am interested in programming, especially in web development. I am looking for an internship
 									or a job as a junior front-end developer. I am a hard-working person who is not afraid of new
-									challenges. I am constantly developing my skills and gaining new knowledge.
+									challenges.
+									<br></br>
+									<br></br>I am constantly developing my skills and gaining new knowledge.
 								</p>
 								<Link className='button' to='/#contact'>
 									Contact
@@ -91,7 +95,7 @@ const About: React.FC = () => {
 									</ul>
 								</div>
 							</div>
-						</div>
+
 					</div>
 				</div>
 			</div>

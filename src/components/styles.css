@@ -43,3 +43,49 @@
 .button:hover .button-icon {
 	animation: icon-bounce 0.3s ease-in-out;
 }
+
+h3 {
+	margin-bottom: 7vh;
+	text-align: center;
+	font-size: 2.5rem;
+	color: var(--header-color);
+	position: relative;
+}
+
+h3:before,
+h3:after {
+	content: '';
+	display: block;
+	height: 2px;
+	background: var(--main-blue);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+h3:before {
+	left: 5%;
+	right: 55%;
+}
+
+h3:after {
+	left: 55%;
+	right: 5%;
+}
+
+@media (max-width: 768px) {
+	h3:before,
+	h3:after {
+		width: 25%;
+	}
+
+	h3:before {
+		left: 0;
+		right: auto;
+	}
+
+	h3:after {
+		left: auto;
+		right: 0;
+	}
+}
