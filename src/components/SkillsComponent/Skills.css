@@ -1,5 +1,4 @@
 .skills-carousel {
-	/* border: 3px solid var(--main-blue); */
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -17,18 +16,16 @@
 	width: 33.33%;
 	text-align: center;
 	padding: 20px;
+	animation: slide-in 0.5s ease-in-out;
 }
 
-.carousel-item.slide-in {
-	transform: translateX(0);
-}
-
-.carousel-item.slide-out-left {
-	transform: translateX(-100%);
-}
-
-.carousel-item.slide-out-right {
-	transform: translateX(100%);
+@keyframes slide-in {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
 }
 
 .skill-icon {

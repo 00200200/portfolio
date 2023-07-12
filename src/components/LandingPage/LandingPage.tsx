@@ -22,11 +22,11 @@ const LandingPage: React.FC = () => {
 						<h1>Michał Furgała</h1>
 						<h2>Full-Stack Developer</h2>
 						<p className='mainPageText'>
-							I am a computer science student at the{' '}
+							I am a computer science student at the <br></br>
 							<a className='text-link' href='https://pwr.edu.pl'>
-								Wrocław University of Technology.
+								Wrocław University of Science and Technology.
 							</a>{' '}
-							Due to my interests, I am learning about Programming
+							<br></br>Due to my interests, I am learning about Programming
 						</p>
 
 						<button className='button' onClick={handleContactClick}>
