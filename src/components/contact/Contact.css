@@ -74,4 +74,11 @@ h4 {
 		/* margin-top: 10px; */
 		text-align: center;
 	}
+
+	.contactContainer {
+		margin-top: 3vh;
+	}
+	.contact-section h4 {
+		margin-bottom: 10vh;
+	}
 }

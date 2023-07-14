@@ -34,7 +34,7 @@ const About: React.FC = () => {
 								development process.
 							</p>
 							<div className='buttonContainer'>
-								<Link className='button' to='/#contact'>
+								<Link className='button about-section' to='/#contact'>
 									Contact
 								</Link>
 							</div>

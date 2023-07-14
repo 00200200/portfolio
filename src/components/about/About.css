@@ -82,7 +82,6 @@ p {
 	font-size: 2rem;
 	color: var(--main-text-color);
 	width: 100%;
-	max-width: 20rem;
 }
 
 .about-skill-icon {
@@ -115,6 +114,11 @@ p {
 	.leftSide {
 		width: 100%;
 		max-width: none;
+		/* white-space: break-spaces; */
+	}
+	.about-me-text-container p {
+		text-align: left;
+		/* text-justify: distribute; */
 	}
 
 	.rightSide {
@@ -128,6 +132,17 @@ p {
 	}
 	.buttonContainer .button {
 		max-width: 120px;
+	}
+	.about-skill-item {
+		justify-content: center;
+		width: 100%;
+	}
+	.about-section {
+		overflow: hidden;
+		display: none;
+	}
+	h4 {
+		margin-top: 2vh;
 	}
 }
 
@@ -184,5 +199,8 @@ h3 {
 
 	.educationList ul li::before {
 		display: none;
+	}
+	.about-skill-item {
+		max-width: 20rem;
 	}
 }
