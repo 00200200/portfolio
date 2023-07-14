@@ -35,7 +35,7 @@ const Navigation: React.FC = () => {
 
 	return (
 		<div className={`navigation ${isMenuOpen ? 'open' : ''}`} ref={navigationRef}>
-			<button className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+			<button className={`hamburger-icon open `} onClick={toggleMenu}>
 				<span className='line' />
 				<span className='line' />
 				<span className='line' />

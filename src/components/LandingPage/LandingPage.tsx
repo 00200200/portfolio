@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './MainPage.css';
 import SkillsCarousel from '../SkillsComponent/Skills';
 
 const LandingPage: React.FC = () => {
 	const contactRef = useRef<HTMLDivElement>(null); // Referencja do elementu kontaktu
+	const [isMobile, setIsMobile] = useState(false);
 
 	const handleContactClick = (): void => {
 		window.scrollTo({ top: 11213, behavior: 'smooth' });
@@ -13,8 +14,21 @@ const LandingPage: React.FC = () => {
 		window.scrollTo({ top: window.innerHeight * 0.9, behavior: 'smooth' });
 	};
 
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 768);
+		};
+
+		window.addEventListener('resize', handleResize);
+		handleResize();
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
 	return (
-		<section id='home' className='main-page'>
+		<section id='home' className={`main-page ${isMobile ? 'mobile' : ''}`}>
 			<div className='content'>
 				<div className='leftContent'>
 					<div className='textContainer'>
@@ -22,11 +36,13 @@ const LandingPage: React.FC = () => {
 						<h1>Michał Furgała</h1>
 						<h2>Full-Stack Developer</h2>
 						<p className='mainPageText'>
-							I am a computer science student at the <br></br>
+							I am a computer science student at the
+							<br />
 							<a className='text-link' href='https://pwr.edu.pl'>
 								Wrocław University of Science and Technology.
 							</a>{' '}
-							<br></br>Due to my interests, I am learning about Programming
+							<br />
+							Due to my interests, I am learning about Programming
 						</p>
 
 						<button className='button' onClick={handleContactClick}>

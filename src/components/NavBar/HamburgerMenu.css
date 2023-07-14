@@ -50,8 +50,8 @@
 
 @media (max-width: 767px) {
 	.open {
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 100%;
 	}
 	.menu-items {
 		width: 100vw;
@@ -60,7 +60,6 @@
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		/* display: none; */
 	}
 
 	.menu-items li {
@@ -70,7 +69,6 @@
 	}
 
 	.hamburger-icon .line {
-		overflow: hidden;
 		width: 100%;
 		height: 2px;
 		background-color: var(--main-text-color);

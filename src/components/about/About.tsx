@@ -14,7 +14,6 @@ const About: React.FC = () => {
       </Link> */}
 
 			<h3>ABOUT ME</h3>
-
 			<div className='aboutContainer'>
 				<div className='container'>
 					<div className='leftSide'>
