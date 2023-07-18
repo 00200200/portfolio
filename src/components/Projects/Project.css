@@ -83,7 +83,7 @@ button:hover {
 	font-size: 28px;
 	/* padding: 2rem; */
 	margin: 2rem;
-	color: var(--main-blue);
+	color: var(--main-text-color);
 }
 
 .disabled {

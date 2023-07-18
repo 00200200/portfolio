@@ -17,7 +17,7 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({ props, description, technolog
 				<a href='#' className='button'>
 					Source Code
 				</a>
-				<a href='#' className='button'>
+				<a href='#' className='button disabled'>
 					Live View
 				</a>
 			</div>
