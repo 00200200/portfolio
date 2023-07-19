@@ -22,8 +22,9 @@ const Projects: React.FC = () => {
 		icons: ['FaReact', 'SiMysql', 'SiExpress', 'SiTypescript', 'SiMaterialUi'],
 		description: "The project was done during udemy course. It's advaned todolist using databases'",
 		sourceCodeLink: 'https://github.com/00200200/ToDoList',
-		liveLink: undefined,
+		liveLink: 'https://todolist00200200.netlify.app/',
 	};
+
 	const portfolio: ProjectProps = {
 		title: 'Portfolio',
 		technologies: 'REACT, TYPESCRIPT,',

@@ -58,7 +58,13 @@ const Project: React.FC<ProjectProps> = props => {
 							<div className='project-info-close' onClick={handleCloseInfo}>
 								X
 							</div>
-							<ProjectInfo props={props} description={description} technologies={technologies} />
+							<ProjectInfo
+								sourceCode={sourceCodeLink}
+								props={props}
+								description={description}
+								technologies={technologies}
+								liveLink={liveLink}
+							/>
 						</div>
 					</div>
 				)}

@@ -147,3 +147,7 @@ button:hover {
 		margin: 10px auto;
 	}
 }
+
+.project-info-container {
+	background-color: var(--primary-color);
+}

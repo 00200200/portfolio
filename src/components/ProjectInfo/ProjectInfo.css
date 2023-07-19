@@ -1,12 +1,31 @@
-
 .project-info {
-	width: 90vw;
-	height: 90vh;
+	height: 100%;
 	margin-top: 20px;
 	padding: 10px;
-	background-color: var(--secondary-color);
+	background-color: var(--primary-color);
 	color: var(--main-text-color);
-	border: 1px solid #ccc;
 	border-radius: 5px;
-	border: 2px solid var(--main-blue);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.headers {
+	margin-bottom: 20px; /* Add some margin between headers and content */
+}
+
+.project-info h1 {
+	font-size: 3rem;
+}
+
+.project-info h2 {
+	font-size: 2rem;
+}
+
+.project-info-content {
+	flex: 1; /* This will make the content take up available space and push buttons to the bottom */
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	text-align: center;
 }

@@ -1,25 +1,47 @@
 import React from 'react';
 import { ProjectProps } from '../Projects/Project';
+import './ProjectInfo.css';
+
 interface ProjectInfoProps {
 	props: ProjectProps;
 	description: string;
 	technologies: string;
+	sourceCode: string | undefined;
+	liveLink: string | undefined;
 }
 
-const ProjectInfo: React.FC<ProjectInfoProps> = ({ props, description, technologies }) => {
+const ProjectInfo: React.FC<ProjectInfoProps> = ({ props, description, technologies, liveLink, sourceCode }) => {
+	const technologyArray = technologies.split(',').map(tech => tech.trim()); // Split the technologies string into an array
+
 	return (
 		<div className='project-info'>
-			<h2>Project Information</h2>
-			<h1>{props.title}</h1>
-			<p>Description: {description}</p>
-			<p>Technologies: {technologies}</p>
+			<div className='headers'>
+				<h1>{props.title}</h1>
+				<h2>Project Information</h2>
+			</div>
+			<div className='project-info-content'>
+				<div className='project-info-description'>
+					<h4>Description</h4>
+					<p>{description}</p>
+				</div>
+				<div className='project-info-technologies'>
+					<h4>Technologies</h4>
+					<ul>
+						{technologyArray.map((technology, index) => (
+							<li key={index}>{technology}</li>
+						))}
+					</ul>
+				</div>
+			</div>
 			<div className='buttons'>
-				<a href='#' className='button'>
+				<a href={sourceCode} className='button source-code'>
 					Source Code
 				</a>
-				<a href='#' className='button disabled'>
-					Live View
-				</a>
+				{liveLink && (
+					<a href={liveLink} className='button live-view'>
+						Live View
+					</a>
+				)}
 			</div>
 		</div>
 	);
