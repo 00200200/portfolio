@@ -11,7 +11,7 @@ interface ProjectInfoProps {
 }
 
 const ProjectInfo: React.FC<ProjectInfoProps> = ({ props, description, technologies, liveLink, sourceCode }) => {
-	const technologyArray = technologies.split(',').map(tech => tech.trim()); // Split the technologies string into an array
+	const technologyArray = technologies.split(',').map(tech => tech.trim());
 
 	return (
 		<div className='project-info'>
@@ -26,13 +26,16 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({ props, description, technolog
 				</div>
 				<div className='project-info-technologies'>
 					<h4>Technologies</h4>
-					<ul>
+					<ul className='project-info-technologies-list'>
 						{technologyArray.map((technology, index) => (
-							<li key={index}>{technology}</li>
+							<li className='project-info-technologies-list-element' key={index}>
+								{technology}
+							</li>
 						))}
 					</ul>
 				</div>
 			</div>
+			<h4>Links</h4>
 			<div className='buttons'>
 				<a href={sourceCode} className='button source-code'>
 					Source Code
