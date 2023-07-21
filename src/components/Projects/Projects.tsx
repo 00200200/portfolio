@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
 		liveLink: undefined,
 	};
 	const templateProjectData: ProjectProps = {
-		title: 'Project Title',
+		title: 'There will be my next project',
 		technologies: 'Technologies Used',
 		icons: ['SiTypescript'],
 		description: 'Project Description',
