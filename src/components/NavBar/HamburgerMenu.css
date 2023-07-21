@@ -75,7 +75,7 @@
 .link-item {
 	color: (var(--main-blue));
 	font-size: 3rem;
-	margin-right: 2rem;
+	margin: 1rem;
 }
 @media (min-width: 768px) {
 	.hamburger-icon {
