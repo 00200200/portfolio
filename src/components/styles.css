@@ -45,8 +45,12 @@
 	animation: icon-bounce 0.3s ease-in-out;
 }
 
+@media (min-width: 768px) {
+	h3 {
+		margin-bottom: 7vh;
+	}
+}
 h3 {
-	margin-bottom: 7vh;
 	text-align: center;
 	font-size: 2.5rem;
 	color: var(--header-color);
