@@ -46,8 +46,8 @@ const Projects: React.FC = () => {
 			<div className='projects-list'>
 				<Project {...toDoList} />
 				<Project {...portfolio} />
-				<Project {...templateProjectData} />
 				<Project {...virusSimulation} />
+				<Project {...templateProjectData} />
 			</div>
 		</section>
 	);
