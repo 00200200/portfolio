@@ -18,6 +18,9 @@
 	.main-page {
 		padding-top: 2rem;
 	}
+	.mainPageParagraph {
+		display: none;
+	}
 }
 
 .content {
