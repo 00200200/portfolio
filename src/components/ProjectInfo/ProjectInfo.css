@@ -64,6 +64,7 @@
 }
 
 /* Responsive Styles */
+
 @media (max-width: 768px) {
 	.project-info-content {
 		width: 100%;
@@ -100,7 +101,7 @@
 	.project-info-technologies-list-element {
 		margin-top: 1rem;
 		margin-bottom: 1rem;
-		width: 50%;
+		width: 65%;
 		margin: 2rem;
 	}
 
