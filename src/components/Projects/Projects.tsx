@@ -25,9 +25,9 @@ const Projects: React.FC = () => {
 
 	const portfolio: ProjectProps = {
 		title: 'Portfolio',
-		technologies: 'REACT, TYPESCRIPT',
-		icons: ['FaReact', 'SiTypescript'],
-		description: 'The project is current website, i made to show my skills and projects.',
+		technologies: 'React, TypeScript, CSS',
+		icons: ['FaReact', 'SiTypescript', 'FaCss3'],
+		description: 'This is my current website, which I created to showcase my skills and projects.',
 		sourceCodeLink: 'https://github.com/00200200/portfolio',
 		liveLink: undefined,
 	};
