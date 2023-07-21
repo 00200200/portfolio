@@ -84,7 +84,11 @@ h4 {
 }
 
 @media (max-width: 600px) {
+	.contact-section h4 {
+		margin-bottom: 0;
+	}
 	.contact-buttons {
 		margin-bottom: 2rem;
+		padding-bottom: 3rem;
 	}
 }
