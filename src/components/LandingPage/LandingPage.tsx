@@ -10,9 +10,6 @@ const LandingPage: React.FC = () => {
 		window.scrollTo({ top: 11213, behavior: 'smooth' });
 	};
 
-	const handleArrowClick = (): void => {
-		window.scrollTo({ top: window.innerHeight * 0.9, behavior: 'smooth' });
-	};
 
 	useEffect(() => {
 		const handleResize = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaGitAlt, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
-import { DiMongodb, DiMysql, DiSass } from 'react-icons/di';
-
+import {  DiMysql, DiSass } from 'react-icons/di';
+// DiMongodb
 const Skills: React.FC = () => {
 	return (
 		<div className='rightSide'>

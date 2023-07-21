@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaHtml5, FaCss3Alt, FaNode, FaReact } from 'react-icons/fa';
-import { SiTypescript, SiMongodb, SiSass, SiMysql, SiJavascript, SiGithub } from 'react-icons/si';
+// SiMongodb
+import { SiTypescript, SiSass, SiMysql, SiJavascript, SiGithub } from 'react-icons/si';
 
 import './Skills.css';
 

@@ -5,7 +5,7 @@ import { MdFileDownload, MdContentCopy } from 'react-icons/md';
 import './Contact.css';
 
 const Contact: React.FC = () => {
-	const url = 'https://drive.google.com/file/d/1Lv9ABS5_Co8Vsyny0FX1VtiYsJF-GSAF/view?usp=drive_link';
+	// const url = 'https://drive.google.com/file/d/1Lv9ABS5_Co8Vsyny0FX1VtiYsJF-GSAF/view?usp=drive_link';
 	const handleCopyEmail = () => {
 		const eMail = 'mchfrg@gmail.com';
 		navigator.clipboard
@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
 						<FaLinkedin className='button-icon' />
 						LinkedIn
 					</a>
-					<a target='_blank' rel='noopener noreferrer' className='button linkedin' href='#'>
+					<a target='_blank' rel='noopener noreferrer' className='button linkedin' href='/'>
 						<MdFileDownload className='button-icon' />
 						CV [PL]
 					</a>
