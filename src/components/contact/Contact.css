@@ -82,3 +82,9 @@ h4 {
 		margin-bottom: 10vh;
 	}
 }
+
+@media (max-width: 600px) {
+	.contact-buttons {
+		margin-bottom: 2rem;
+	}
+}

@@ -37,3 +37,9 @@
 		height: auto;
 	}
 }
+
+@media (max-width: 500px) {
+	#projects {
+		margin-top: 5rem;
+	}
+}
