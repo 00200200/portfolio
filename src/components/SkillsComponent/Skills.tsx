@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { FaHtml5, FaCss3Alt, FaNode, FaReact } from 'react-icons/fa';
-import { AiFillDatabase } from 'react-icons/ai';
 import { SiTypescript, SiMongodb, SiSass, SiMysql, SiJavascript, SiGithub } from 'react-icons/si';
 
 import './Skills.css';
@@ -14,7 +13,7 @@ const SkillsCarousel: React.FC = () => {
 		{ icon: <SiJavascript className='skill-icon' />, name: 'JavaScript' },
 		{ icon: <SiTypescript className='skill-icon' />, name: 'TypeScript' },
 		{ icon: <SiSass className='skill-icon' />, name: 'SCSS' },
-		{ icon: <SiMongodb className='skill-icon' />, name: 'MongoDB' },
+		// { icon: <SiMongodb className='skill-icon' />, name: 'MongoDB' },
 		{ icon: <SiMysql className='skill-icon' />, name: 'MySQL' },
 		{ icon: <SiGithub className='skill-icon' />, name: 'Git' },
 	];

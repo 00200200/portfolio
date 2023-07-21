@@ -1,19 +1,14 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FiHome, FiCode, FiMail, FiUser } from 'react-icons/fi';
-
-import './HamburgerMenu.css';
-
 import './HamburgerMenu.css';
 
 const Navigation: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const navigationRef = useRef<HTMLDivElement>(null);
-
 	const toggleMenu = (): void => {
 		setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
 	};
-
 	const handleScrollToSection = (id: string): void => {
 		if (id === 'home') {
 			window.scrollTo({ top: 0, behavior: 'smooth' });

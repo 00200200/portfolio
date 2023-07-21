@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectProps } from '../Projects/Project';
+import { ProjectProps } from '../Projects/_Project';
 import './ProjectInfo.css';
 
 interface ProjectInfoProps {

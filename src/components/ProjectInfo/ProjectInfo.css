@@ -1,3 +1,4 @@
+/* ProjectInfo.css */
 .project-info {
 	height: 100%;
 	margin-top: 20px;
@@ -8,7 +9,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	overflow-y: scroll;
 }
 
 .headers {
@@ -21,6 +21,11 @@
 
 .project-info h2 {
 	font-size: 2rem;
+}
+
+.project-info h4 {
+	color: var(--main-header-color);
+	margin-top: 2rem;
 }
 
 .project-info-content {
@@ -38,7 +43,8 @@
 	margin-top: 4rem;
 	list-style: none;
 	display: flex;
-	justify-content: space-around;
+	/* justify-content: space-around; */
+	justify-content: center;
 }
 
 .project-info-technologies-list-element {
@@ -46,6 +52,8 @@
 	border-radius: 5px;
 	padding: 1rem;
 	border: 2px solid var(--main-blue);
+	margin: 4rem;
+	margin-top: 2rem;
 }
 
 .buttons {
@@ -60,7 +68,9 @@
 	.project-info-content {
 		width: 100%;
 	}
+
 	.project-info {
+		overflow-y: scroll;
 		padding: 5px;
 	}
 
@@ -79,16 +89,19 @@
 	.project-info-technologies {
 		margin-top: 2rem;
 	}
+
 	.project-info-technologies-list {
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 		flex-direction: column;
 	}
+
 	.project-info-technologies-list-element {
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 		width: 50%;
+		margin: 2rem;
 	}
 
 	.buttons {
