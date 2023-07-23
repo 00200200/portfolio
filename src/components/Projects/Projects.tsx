@@ -2,7 +2,6 @@ import React from 'react';
 import Project from './_Project';
 import './Projects.css';
 import { ProjectProps } from './_Project';
-import { SiExpress } from 'react-icons/si';
 
 const Projects: React.FC = () => {
 	const virusSimulation: ProjectProps = {
