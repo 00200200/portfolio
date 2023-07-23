@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IconType } from 'react-icons';
-import { FaJava, FaReact, FaCss3 } from 'react-icons/fa';
-import { SiGradle, SiMysql, SiExpress, SiTypescript } from 'react-icons/si';
+import { FaJava, FaReact, FaCss3, FaSass } from 'react-icons/fa';
+import { SiGradle, SiMysql, SiExpress, SiTypescript, SiFirebase } from 'react-icons/si';
 import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import './Project.css';
 
@@ -13,6 +13,8 @@ const iconComponents: { [key: string]: IconType } = {
 	SiExpress: SiExpress,
 	SiTypescript: SiTypescript,
 	FaCss3: FaCss3,
+	FaSass: FaSass,
+	SiFirebase: SiFirebase,
 };
 
 export interface ProjectProps {

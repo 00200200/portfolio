@@ -2,6 +2,7 @@ import React from 'react';
 import Project from './_Project';
 import './Projects.css';
 import { ProjectProps } from './_Project';
+import { SiExpress } from 'react-icons/si';
 
 const Projects: React.FC = () => {
 	const virusSimulation: ProjectProps = {
@@ -26,17 +27,18 @@ const Projects: React.FC = () => {
 	const portfolio: ProjectProps = {
 		title: 'Portfolio',
 		technologies: 'React, TypeScript, CSS',
-		icons: ['FaReact', 'SiTypescript', 'FaCss3'],
+		icons: ['FaReact', '', 'FaCss3'],
 		description: 'This is my current website, which I created to showcase my skills and projects.',
 		sourceCodeLink: 'https://github.com/00200200/portfolio',
 		liveLink: undefined,
 	};
-	const templateProjectData: ProjectProps = {
-		title: 'There will be my next project',
-		technologies: 'Technologies Used',
-		icons: ['SiTypescript'],
-		description: 'Project Description',
-		sourceCodeLink: 'Project Source Code Link',
+	const jobBoard: ProjectProps = {
+		title: 'Job Board',
+		technologies: 'React,Typescript,FireBase,Express,NodeMailer',
+		icons: ['FaReact', 'SiTypescript', 'SiFirebase', 'SiExpress'],
+		description:
+			'I have developed a small application to better understand the workings of nodemailer, firebase, and express, which will be beneficial for my upcoming project. Before diving into my main project, I wanted to gain hands-on experience with nodemailer and firebase in a smaller, more manageable project.',
+		sourceCodeLink: 'https://github.com/00200200/Job_Agency_Template_Firebase',
 		liveLink: undefined,
 	};
 
@@ -47,7 +49,7 @@ const Projects: React.FC = () => {
 				<Project {...toDoList} />
 				<Project {...portfolio} />
 				<Project {...virusSimulation} />
-				<Project {...templateProjectData} />
+				<Project {...jobBoard} />
 			</div>
 		</section>
 	);
