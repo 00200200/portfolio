@@ -31,7 +31,7 @@ const LandingPage: React.FC = () => {
 					<div className='textContainer'>
 						<p className='mainPageParagraph'>Hi, my name is</p>
 						<h1>Michał Furgała</h1>
-						<h2>Full-Stack Developer</h2>
+						<h2>JavaScript Developer</h2>
 						<p className='mainPageText'>
 							I am a computer science student at the
 							<br />
