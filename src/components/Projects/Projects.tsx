@@ -2,7 +2,6 @@ import React from 'react';
 import Project from './_Project';
 import './Projects.css';
 import { ProjectProps } from './_Project';
-
 const Projects: React.FC = () => {
 	const virusSimulation: ProjectProps = {
 		title: 'Virus Simulation',
@@ -23,14 +22,14 @@ const Projects: React.FC = () => {
 		liveLink: 'https://todolist00200200.netlify.app/',
 	};
 
-	const portfolio: ProjectProps = {
-		title: 'Portfolio',
-		technologies: 'React, TypeScript, CSS',
-		icons: ['FaReact', 'SiTypescript', 'FaCss3'],
+	const giardDesign: ProjectProps = {
+		title: 'giardDesign',
+		technologies: 'JavaScript,HTML,TailwindCss,MacyJS,Netlify,AOS',
+		icons: ['FaHtml5', 'FaJs', 'SiTailwindcss', 'SiNetlify'],
 		description:
-			'This is the website you are currently on, I created it to remind myself the basics of react/typescript and to share my projects and skills',
-		sourceCodeLink: 'https://github.com/00200200/portfolio',
-		liveLink: undefined,
+			'This is the vanilla JavaScript website which i created during the recruitment process for the company adRespect.pl. I used TailwindCss to style the page. I also used MacyJS to create a grid of images. I used AOS to create animations. I used Netlify to deploy the page.',
+		sourceCodeLink: 'https://github.com/00200200/glardDesign',
+		liveLink: 'https://glarddesign.netlify.app/',
 	};
 	const jobBoard: ProjectProps = {
 		title: 'Job Board',
@@ -47,10 +46,11 @@ const Projects: React.FC = () => {
 			<h3>PROJECTS</h3>
 			<div className='projects-list'>
 				<Project {...toDoList} />
-				<Project {...portfolio} />
+				<Project {...giardDesign} />
 				<Project {...virusSimulation} />
 				<Project {...jobBoard} />
 			</div>
+			
 		</section>
 	);
 };
