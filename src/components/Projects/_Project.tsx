@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { IconType } from 'react-icons';
-import { FaJava, FaReact, FaCss3, FaSass,FaHtml5,FaJs, } from 'react-icons/fa';
-import { SiGradle, SiMysql, SiExpress, SiTypescript, SiFirebase ,SiTailwindcss,SiNetlify} from 'react-icons/si';
+import { FaJava, FaReact, FaCss3, FaSass, FaHtml5, FaJs } from 'react-icons/fa';
+import { SiGradle, SiMysql, SiExpress, SiTypescript, SiFirebase, SiTailwindcss, SiNetlify } from 'react-icons/si';
 import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import './Project.css';
+import { url } from 'inspector';
 
 const iconComponents: { [key: string]: IconType } = {
 	FaJava: FaJava,
@@ -19,7 +20,6 @@ const iconComponents: { [key: string]: IconType } = {
 	FaJs: FaJs,
 	SiTailwindcss: SiTailwindcss,
 	SiNetlify: SiNetlify,
-
 };
 
 export interface ProjectProps {
@@ -29,10 +29,11 @@ export interface ProjectProps {
 	description: string;
 	sourceCodeLink: string | undefined;
 	liveLink?: string | undefined;
+	backgroundImage: string | undefined;
 }
 
 const Project: React.FC<ProjectProps> = props => {
-	const { title, technologies, icons, description, sourceCodeLink, liveLink } = props;
+	const { title, technologies, icons, description, sourceCodeLink, liveLink, backgroundImage } = props;
 	const [showInfo, setShowInfo] = useState(false);
 	const [isPageLocked, setIsPageLocked] = useState(false);
 
@@ -42,7 +43,9 @@ const Project: React.FC<ProjectProps> = props => {
 	};
 
 	return (
-		<div className={`project ${isPageLocked ? 'disabled' : ''}`}>
+		<div
+			className={`project ${isPageLocked ? 'disabled' : ''}`}
+			style={{ backgroundImage: `url(${backgroundImage})` }}>
 			<div className={`project-content ${showInfo ? 'project-info-open' : ''}`}>
 				<h1 className='project-title'>{title}</h1>
 				<div className='project-technologies'>

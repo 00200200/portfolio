@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaHtml5, FaCss3Alt, FaNode, FaReact } from 'react-icons/fa';
 // SiMongodb
-import { SiTypescript, SiSass, SiMysql, SiJavascript, SiGithub } from 'react-icons/si';
+import { SiTypescript, SiSass, SiMysql, SiJavascript, SiGithub, SiNetlify } from 'react-icons/si';
 
 import './Skills.css';
 
@@ -17,6 +17,7 @@ const SkillsCarousel: React.FC = () => {
 		// { icon: <SiMongodb className='skill-icon' />, name: 'MongoDB' },
 		{ icon: <SiMysql className='skill-icon' />, name: 'MySQL' },
 		{ icon: <SiGithub className='skill-icon' />, name: 'Git' },
+		{ icon: <SiNetlify className='skill-icon' />, name: 'Netlify' },
 	];
 	const [currentSlide, setCurrentSlide] = useState(0);
 
