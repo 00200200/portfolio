@@ -4,7 +4,6 @@ import { FaJava, FaReact, FaCss3, FaSass, FaHtml5, FaJs } from 'react-icons/fa';
 import { SiGradle, SiMysql, SiExpress, SiTypescript, SiFirebase, SiTailwindcss, SiNetlify } from 'react-icons/si';
 import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import './Project.css';
-import { url } from 'inspector';
 
 const iconComponents: { [key: string]: IconType } = {
 	FaJava: FaJava,
@@ -43,44 +42,39 @@ const Project: React.FC<ProjectProps> = props => {
 	};
 
 	return (
-		<div
-			className={`project ${isPageLocked ? 'disabled' : ''}`}
-			style={{ backgroundImage: `url(${backgroundImage})` }}>
-			<div className={`project-content ${showInfo ? 'project-info-open' : ''}`}>
-				<h1 className='project-title'>{title}</h1>
-				<div className='project-technologies'>
-					{icons.map((icon, index) => {
-						const IconComponent = iconComponents[icon];
-						if (IconComponent) {
-							return <IconComponent key={index} className='project-icon' />;
-						} else {
-							return null; // Jeśli przekazano nieznany typ ikony, można zwrócić null lub dodać odpowiednią obsługę
-						}
-					})}
+		<>
+			<div onClick={() => setShowInfo(true)} className={`project ${isPageLocked ? 'disabled' : ''}`}>
+				<div className='project-image-container'>
+					<img src={backgroundImage} alt={title} className='project-image' />
 				</div>
-				{!showInfo && (
-					<button className='button' onClick={() => setShowInfo(true)}>
-						More Info
-					</button>
-				)}
-				{showInfo && (
-					<div className='project-info-overlay'>
-						<div className='project-info-container'>
-							<div className='project-info-close' onClick={handleCloseInfo}>
-								X
-							</div>
-							<ProjectInfo
-								sourceCode={sourceCodeLink}
-								props={props}
-								description={description}
-								technologies={technologies}
-								liveLink={liveLink}
-							/>
-						</div>
+
+				<div className={`project-content ${showInfo ? 'project-info-open' : ''}`}>
+					<div className='project-technologies'>
+						{icons.map((icon, index) => {
+							const IconComponent = iconComponents[icon];
+							return IconComponent ? <IconComponent key={index} className='project-icon' /> : null;
+						})}
 					</div>
-				)}
+				</div>
 			</div>
-		</div>
+
+			{showInfo && (
+				<div className='project-info-overlay'>
+					<div className='project-info-container'>
+						<div className='project-info-close' onClick={handleCloseInfo}>
+							X
+						</div>
+						<ProjectInfo
+							sourceCode={sourceCodeLink}
+							props={props}
+							description={description}
+							technologies={technologies}
+							liveLink={liveLink}
+						/>
+					</div>
+				</div>
+			)}
+		</>
 	);
 };
 
