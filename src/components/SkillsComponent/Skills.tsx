@@ -19,6 +19,7 @@ const SkillsCarousel: React.FC = () => {
 		{ icon: <SiGithub className='skill-icon' />, name: 'Git' },
 		{ icon: <SiNetlify className='skill-icon' />, name: 'Netlify' },
 		{ icon: <SiTailwindcss className='skill-icon' />, name: 'Tailwindcss' },
+
 	];
 	const [currentSlide, setCurrentSlide] = useState(0);
 

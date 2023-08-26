@@ -10,7 +10,6 @@ const App: React.FC = () => {
 		<div id='root' style={{ background: '323232' }}>
 			<Routes>
 				<Route path='/' element={<MainPage />} />
-
 			</Routes>
 		</div>
 	);
