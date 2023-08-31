@@ -9,17 +9,16 @@ const SkillsCarousel: React.FC = () => {
 	const skills = [
 		{ icon: <FaHtml5 className='skill-icon' />, name: 'HTML' },
 		{ icon: <FaCss3Alt className='skill-icon' />, name: 'CSS' },
-		{ icon: <FaNode className='skill-icon' />, name: 'Node.js' },
+		// { icon: <FaNode className='skill-icon' />, name: 'Node.js' },
 		{ icon: <FaReact className='skill-icon' />, name: 'React' },
 		{ icon: <SiJavascript className='skill-icon' />, name: 'JavaScript' },
 		{ icon: <SiTypescript className='skill-icon' />, name: 'TypeScript' },
 		{ icon: <SiSass className='skill-icon' />, name: 'SCSS' },
 		// { icon: <SiMongodb className='skill-icon' />, name: 'MongoDB' },
-		{ icon: <SiMysql className='skill-icon' />, name: 'MySQL' },
+		// { icon: <SiMysql className='skill-icon' />, name: 'MySQL' },
 		{ icon: <SiGithub className='skill-icon' />, name: 'Git' },
 		{ icon: <SiNetlify className='skill-icon' />, name: 'Netlify' },
 		{ icon: <SiTailwindcss className='skill-icon' />, name: 'Tailwindcss' },
-
 	];
 	const [currentSlide, setCurrentSlide] = useState(0);
 

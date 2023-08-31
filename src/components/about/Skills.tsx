@@ -34,18 +34,18 @@ const Skills: React.FC = () => {
 							<SiTypescript className='about-skill-icon' />
 							TypeScript
 						</li>
-						<li className='about-skill-item'>
+						{/* <li className='about-skill-item'>
 							<FaNodeJs className='about-skill-icon' />
 							Node.js
-						</li>
+						</li> */}
 						{/* <li className='about-skill-item'>
 							<DiMongodb className='about-skill-icon' />
 							MongoDB
 						</li> */}
-						<li className='about-skill-item'>
+						{/* <li className='about-skill-item'>
 							<DiMysql className='about-skill-icon' />
 							MySQL
-						</li>
+						</li> */}
 						<li className='about-skill-item'>
 							<DiSass className='about-skill-icon' />
 							Sass
