@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHtml5, FaCss3, FaJs, FaReact, FaGitAlt, FaNodeJs } from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaGitAlt } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import {  DiMysql, DiSass } from 'react-icons/di';
 // DiMongodb

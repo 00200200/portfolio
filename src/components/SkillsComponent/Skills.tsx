@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaHtml5, FaCss3Alt, FaNode, FaReact } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
 // SiMongodb
 import { SiTypescript, SiSass, SiMysql, SiJavascript, SiGithub, SiNetlify, SiTailwindcss } from 'react-icons/si';
 
