@@ -34,10 +34,10 @@ const Skills: React.FC = () => {
 							<SiTypescript className='about-skill-icon' />
 							TypeScript
 						</li>
-						<li className='about-skill-item'>
+						{/* <li className='about-skill-item'>
 							<FaNodeJs className='about-skill-icon' />
 							Node.js
-						</li>
+						</li> */}
 						{/* <li className='about-skill-item'>
 							<DiMongodb className='about-skill-icon' />
 							MongoDB
