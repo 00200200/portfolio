@@ -7,6 +7,8 @@ const giardDesignImage = require('./GiardDesign.png');
 const toDoListImage = require('./ToDoList.png');
 const portfolioImage = require('./portfolio.png');
 const virusSimulationImage = require('./virusSimulator.png');
+const weatherAppImage = require('./WeatherApp.png');
+const FarmSimulatorImage = require('./FarmSimulator.png');
 const Projects: React.FC = () => {
 	const virusSimulation: ProjectProps = {
 		title: 'Virus Simulation',
@@ -50,6 +52,27 @@ const Projects: React.FC = () => {
 		backgroundImage: portfolioImage,
 	};
 
+	const weatherApp: ProjectProps = {
+		title: 'Weather App',
+		technologies: 'Java, JavaFX, Maven, SQL',
+		icons: ['FaJava', 'SiJavafx', 'FaMaven', 'SiMysql'],
+		description:
+			'Application developed to collect data via API, collect it in a MySql database and the ability to display graphs and selected data.',
+		sourceCodeLink: 'https://github.com/00200200/dataViewer',
+		liveLink: undefined,
+		backgroundImage: weatherAppImage,
+	};
+	const farmSimulator: ProjectProps = {
+		title: 'Farm Simulator App',
+		technologies: 'Java, JavaFX, Maven, TCP/IP',
+		icons: ['FaJava', 'SiJavafx', 'FaMaven'],
+		description:
+			'A farm simulator communicating via TCP/IP, planting is done via Seeder, harvesting via Harvest, the application records how many plants are planted and how many harvested. ',
+		sourceCodeLink: 'https://github.com/00200200/farmSimulatorTCP_IP',
+		liveLink: undefined,
+		backgroundImage: FarmSimulatorImage,
+	};
+
 	return (
 		<section id='projects' className='projects'>
 			<h3>PROJECTS</h3>
@@ -58,6 +81,8 @@ const Projects: React.FC = () => {
 				<Project {...giardDesign} />
 				<Project {...virusSimulation} />
 				<Project {...portfolio} />
+				<Project {...weatherApp} />
+				<Project {...farmSimulator} />
 			</div>
 		</section>
 	);
