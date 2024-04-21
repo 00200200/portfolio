@@ -1,8 +1,8 @@
 import React from 'react';
-import { FaHtml5, FaCss3, FaJs, FaReact, FaGitAlt } from 'react-icons/fa';
-import { SiTypescript } from 'react-icons/si';
-import {  DiMysql, DiSass } from 'react-icons/di';
-// DiMongodb
+import { FaHtml5, FaCss3, FaJs, FaReact, FaGitAlt, FaJava } from 'react-icons/fa';
+import { SiTypescript, SiPython, SiMysql,SiTailwindcss } from 'react-icons/si';
+
+
 const Skills: React.FC = () => {
 	return (
 		<div className='rightSide'>
@@ -34,21 +34,21 @@ const Skills: React.FC = () => {
 							<SiTypescript className='about-skill-icon' />
 							TypeScript
 						</li>
-						{/* <li className='about-skill-item'>
-							<FaNodeJs className='about-skill-icon' />
-							Node.js
-						</li> */}
-						{/* <li className='about-skill-item'>
-							<DiMongodb className='about-skill-icon' />
-							MongoDB
-						</li> */}
 						<li className='about-skill-item'>
-							<DiMysql className='about-skill-icon' />
-							MySQL
+							<FaJava className='about-skill-icon' />
+							Java
 						</li>
 						<li className='about-skill-item'>
-							<DiSass className='about-skill-icon' />
-							Sass
+							<SiPython className='about-skill-icon' />
+							Python
+						</li>
+						<li className='about-skill-item'>
+							<SiTailwindcss className='about-skill-icon' />
+							TailwindCSS
+						</li>
+						<li className='about-skill-item'>
+							<SiMysql className='about-skill-icon' />
+							SQL
 						</li>
 					</ul>
 				</div>
