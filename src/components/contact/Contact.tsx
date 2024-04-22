@@ -1,9 +1,7 @@
 import React from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { MdFileDownload, MdContentCopy } from 'react-icons/md';
-
+import { MdContentCopy } from 'react-icons/md';
 import './Contact.css';
-
 const Contact: React.FC = () => {
 	const handleCopyEmail = () => {
 		const eMail = 'mchfrg@gmail.com';
@@ -41,14 +39,7 @@ const Contact: React.FC = () => {
 						<FaLinkedin className='button-icon' />
 						LinkedIn
 					</a>
-					<a
-						target='_blank'
-						rel='noopener noreferrer'
-						className='button linkedin'
-						href='https://drive.google.com/file/d/1CmSQ5rzccjdgSodNFcttssakv-Ksf4Zp/view?usp=drive_link'>
-						<MdFileDownload className='button-icon' />
-						CV [PL]
-					</a>
+
 					<button className='button' onClick={handleCopyEmail}>
 						<MdContentCopy className='button-icon' />
 						E-Mail
