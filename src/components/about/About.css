@@ -62,7 +62,9 @@ h4 {
 
 .rightSide {
 	width: 100%;
+
 	max-width: 400px;
+
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
@@ -94,6 +96,9 @@ p {
 }
 
 @media (max-width: 768px) {
+	.rightSide {
+		max-width: none;
+	}
 	.aboutContainer {
 		/* height: 100vh; */
 		width: 100%;
@@ -140,6 +145,9 @@ p {
 	}
 	h4 {
 		margin-top: 2vh;
+	}
+	.educationList {
+		text-align: center;
 	}
 }
 
